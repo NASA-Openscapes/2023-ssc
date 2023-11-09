@@ -105,6 +105,132 @@
     "text": "Earthdata Search\nThis tutorial guides you through how to use Earthdata Search for NASA Earth observations search and discovery, and how to connect the search output (e.g. download or access links) to a programmatic workflow (locally or from within the cloud).\n\nStep 1. Go to Earthdata Search and Login\nGo to Earthdata Search https://search.earthdata.nasa.gov and use your Earthdata login credentials to log in. If you do not have an Earthdata account, please see the Workshop Prerequisites for guidance.\n\n\nStep 2. Search for dataset of interest\nUse the search box in the upper left to type key words. In this example we are interested in the GEDI or ICESAT-2 which is managed by the LP DAAC and made available from the NASA Earthdata Cloud archive hosted in AWS cloud.\nType GEDI in the search bar Click on the “Available from AWS Cloud” filter option on the left.\nWe can click on the (i) icon for the dataset to read more details, including the dataset shortname (helpful for programmatic workflows) just below the dataset name; here ECO_L2T_LSTE.\n\n\nStep 3. Explore the dataset details, including Cloud Access information\nOnce we clicked the (i), scrolling down the info page for the dataset we will see Cloud Access information, such as:\n\nwhether the dataset is available in the cloud\n\nthe cloud Region (all NASA Earthdata Cloud data is/will be in us-west-2 region)\n\nthe S3 storage bucket and object prefix where this data is located\n\nlink that generates AWS S3 Credentials for in-cloud data access (we will cover this in the Direct Data Access Tutorials)\n\nlink to documentation describing the In-region Direct S3 Access to Buckets. Note: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)\n\n\n\n\nFigure caption: Cloud access info in EDS\n\n\n\n\n\nFigure caption: Documentation describing the In-region Direct S3 Access to Buckets\n\n\nNote: Clicking on “For Developers” to exapnd will provide programmatic endpoints such as those for the CMR API, and more.\nFor now, let’s say we are intersted in getting download link(s) or access link(s) for specific data files (granules) within this collection.\nAt the top of the dataset info section, click on Search Results, which will take us back to the list of datasets matching our search parameters. Clicking on the dataset (ECOSTRESS ECO_L2T_LSTE) we now see a list of files (granules) that are part of the dataset (collection).\n\n\nStep 4a. Download or data access for a single granule\nTo download files for a granule click the download arrow on the card (or list row)\n\n\n\nFigure caption: Download granules\n\n\nYou can also get the S3 information (e.g., AWS region, bucket, temperary credentials for S3 access, and file names) by selecting the AWS S3 Access tab.\n\n\n\nFigure caption: S3 access for granules\n\n\n\nStep 4b. Download or data access for multiple granule\nTo download multiple granules, click on the green + symbol to add files to our project. Click on the green button towards the bottom that says “Download”. This will take us to another page with options to customize our download or access link(s).\n\n\n\nFigure caption: Select granules and click download\n\n\nOn the next page click the Direct Download option and click the green Download Data on the bottom left side of the page.\n\n\n\nFigure caption: Direct download multiple granules\n\n\nWe’re now taked to the final page for instructions to download and links for data access in the cloud. You should see three tabs: Download Files, AWS S3 Access, Download Script:\n\n\n\nFigure caption: Download to local\n\n\n\n\n\nFigure caption: Direct S3 access\n\n\nThe Download Files tab provides the https:// links for downloading the files locally\nThe AWS S3 Access tab provides the S3:// links, which is what we would use to access the data directly in-region (us-west-2) within the AWS cloud."
   },
   {
+    "objectID": "tutorials/index.html",
+    "href": "tutorials/index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live demos during the Workshop, and are available for self-paced learning.\nHands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access.\nTutorials are markdown (.md) and Jupyter (.ipynb) notebooks, and are available on GitHub"
+  },
+  {
+    "objectID": "tutorials/schedule.html",
+    "href": "tutorials/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The SSC GEDI/ICESAT-2 Workshop will take place on November 15th.\nNote, hands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access."
+  },
+  {
+    "objectID": "tutorials/schedule.html#workshop-schedule",
+    "href": "tutorials/schedule.html#workshop-schedule",
+    "title": "Schedule",
+    "section": "Workshop Schedule",
+    "text": "Workshop Schedule\n\n\n\nHour\nEvent\nInstructor\n\n\n\n\n3:00 pm CST/MX\nWelcome and Overview of Tutorial\n\n\n\n3:10 pm\nCryoCloud - A Shared Cloud Platform for NASA\nTasha Snow (Colorado School of Mines)\n\n\n3:25 pm\nHub task - clone repo\n\n\n\n3:35 pm\nBreak (Q&A)\n\n\n\n3:40 pm\nICESat-2 Data Access, NASA DAAC @ NSIDC\nLuis Alberto Lopez Espinosa  (NSIDC, University of Colorado)\n\n\n4:00 pm\nBreak (Q&A)\n\n\n\n4:10 pm\nThe icepyx Software Library and Community\nRachel Wegener (University of Maryland)\n\n\n4:30 pm\nBreak\n\n\n\n4:40 pm\nAccess and Discovery of GEDI Data via the DAAC at the ORNL\nRupesh Shrestha (Oakridge National Laboratory, ORNL-DAAC)\n\n\n5:00 pm\nBreak (Q&A)\n\n\n\n5:10 pm\nGEDI Data User Resources at the LP DAAC\nMahsa Jami (NASA LP-DAAC)\n\n\n5:30 pm\nBreak (Q&A)\n\n\n\n5:40 pm\nEjemplos de aplicaciones de uso de éxito GEDI y posibilidades(Mapas, Reforestacion, Especie protegida)\nAdrian Pascual\n\n\n6:00 pm CST/MX\nEnd of Tutorial\n\n\n\n\n\nThank you!\nJupyterHub: close out.\n\nclose out your JupyterHub instance if you are finished for the day, following these instructions.\n\nYou will continue to have access to the 2i2c JupyterHub in AWS for a week following the SSC GEDI/ICESAT-2 Cloud Workshop. You may use that time to continue work and all learn more about migrating data accass routines and science workflows to the Cloud. This cloud compute environment is supported by the NASA Openscapes project."
+  },
+  {
+    "objectID": "tutorials/schedule.html#getting-help-during-the-workshop",
+    "href": "tutorials/schedule.html#getting-help-during-the-workshop",
+    "title": "Schedule",
+    "section": "Getting help during the Workshop",
+    "text": "Getting help during the Workshop\nPlease use the webex chat platform to ask any questions you have during the workshop."
+  },
+  {
+    "objectID": "tutorials/cloud/cloud-paradigm.html",
+    "href": "tutorials/cloud/cloud-paradigm.html",
+    "title": "NASA and the Cloud Paradigm",
+    "section": "",
+    "text": "Slides that introduce NASA Earthdata Cloud & the Cloud Paradigm."
+  },
+  {
+    "objectID": "tutorials/further-resources.html",
+    "href": "tutorials/further-resources.html",
+    "title": "Additional resources",
+    "section": "",
+    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
+  },
+  {
+    "objectID": "tutorials/further-resources.html#a-growing-list-of-resources",
+    "href": "tutorials/further-resources.html#a-growing-list-of-resources",
+    "title": "Additional resources",
+    "section": "",
+    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
+  },
+  {
+    "objectID": "tutorials/further-resources.html#additional-tutorials",
+    "href": "tutorials/further-resources.html#additional-tutorials",
+    "title": "Additional resources",
+    "section": "Additional tutorials",
+    "text": "Additional tutorials\n\nData_Access__Direct_S3_Access__PODAAC_ECCO_SSH using CMR-STAC API to retrieve S3 links\nDirect access to ECCO data in S3 (from us-west-2) - Direct S3 access example with netCDF data\nDirect_S3_Access__gdalvrt\nDirect_S3_Access__rioxarray_clipping\nCalculate black-sky, white-sky, and actual albedo (MCD43A) from MCD43A1 BRDF Parameters using R\nXarray Zonal Statistics"
+  },
+  {
+    "objectID": "tutorials/prerequisites.html",
+    "href": "tutorials/prerequisites.html",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
+  },
+  {
+    "objectID": "tutorials/prerequisites.html#prerequisites",
+    "href": "tutorials/prerequisites.html#prerequisites",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html",
+    "href": "tutorials/science/Intro_xarray_hvplot.html",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "",
+    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "",
+    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "What is xarray",
+    "text": "What is xarray\nxarray is an open-source project and python package to work with labelled multi-dimensional arrays. It is leverages numpy, pandas, matplotlib and dask to build Dataset and DataArray objects with built-in methods to subset, analyze, interpolate, and plot multi-dimensional data. It makes working with multi-dimensional data cubes efficient and fun. It will change your life for the better. You’ll be more attractive, more interesting, and better equiped to take on lifes challenges."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "What you will learn from this tutorial",
+    "text": "What you will learn from this tutorial\nIn this tutorial you will learn how to:\n\nload a netcdf file into xarray\ninterrogate the Dataset and understand the difference between DataArray and Dataset\nsubset a Dataset\ncalculate annual and monthly mean fields\ncalculate a time series of zonal means\nplot these results\n\nAs always, we’ll start by importing xarray. We’ll follow convention by giving the module the shortname xr\n\nimport xarray as xr\nxr.set_options(keep_attrs=True)\nimport hvplot.xarray\n\nI’m going to use one of xarray’s tutorial datasets. In this case, air temperature from the NCEP reanalysis. I’ll assign the result of the open_dataset to ds. I may change this to access a dataset directly\n\nds = xr.tutorial.open_dataset(\"air_temperature\")\n\nAs we are in an interactive environment, we can just type ds to see what we have.\n\nds\n\nFirst thing to notice is that ds is an xarray.Dataset object. It has dimensions, lat, lon, and time. It also has coordinate variables with the same names as these dimensions. These coordinate variables are 1-dimensional. This is a NetCDF convention. The Dataset contains one data variable, air. This has dimensions (time, lat, lon).\nClicking on the document icon reveals attributes for each variable. Clicking on the disk icon reveals a representation of the data.\nEach of the data and coordinate variables can be accessed and examined using the variable name as a key.\n\nds.air\n\n\nds['air']\n\nThese are xarray.DataArray objects. This is the basic building block for xarray.\nVariables can also be accessed as attributes of ds.\n\nds.time\n\nA major difference between accessing a variable as an attribute versus using a key is that the attribute is read-only but the key method can be used to update the variable. For example, if I want to convert the units of air from Kelvin to degrees Celsius.\n\nds['air'] = ds.air - 273.15\n\nThis approach can also be used to add new variables\n\nds['air_kelvin'] = ds.air + 273.15\n\n\nds\n\nIt is helpful to update attributes such as units, this saves time, confusion and mistakes, especially when you save the dataset.\n\nds['air'].attrs['units'] = 'degC'\n\n\nds"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Subsetting and Indexing",
+    "text": "Subsetting and Indexing\nSubsetting and indexing methods depend on whether you are working with a Dataset or DataArray. A DataArray can be accessed using positional indexing just like a numpy array. To access the temperature field for the first time step, you do the following.\n\nds['air'][0,:,:]\n\nNote this returns a DataArray with coordinates but not attributes.\nHowever, the real power is being able to access variables using coordinate variables. I can get the same subset using the following. (It’s also more explicit about what is being selected and robust in case I modify the DataArray and expect the same output.)\n\nds['air'].sel(time='2013-01-01').time\n\n\nds.air.sel(time='2013-01-01')\n\nI can also do slices. I’ll extract temperatures for the state of Colorado. The bounding box for the state is [-109 E, -102 E, 37 N, 41 N].\nIn the code below, pay attention to both the order of the coordinates and the range of values. The first value of the lat coordinate variable is 41 N, the second value is 37 N. Unfortunately, xarray expects slices of coordinates to be in the same order as the coordinates. Note lon is 0 to 360 not -180 to 180, and I let python calculate it for me within the slice.\n\nds.air.sel(lat=slice(41.,37.), lon=slice(360-109,360-102))\n\nWhat if we want temperature for a point, for example Denver, CO (39.72510678889283 N, -104.98785545855408 E). xarray can handle this! If we just want data from the nearest grid point, we can use sel and specify the method as “nearest”.\n\ndenver_lat, denver_lon = 39.72510678889283, -104.98785545855408\n\n\nds.air.sel(lat=denver_lat, lon=360+denver_lon, method='nearest').hvplot()\n\nIf we want to interpolate, we can use interp(). In this case I use linear or bilinear interpolation.\ninterp() can also be used to resample data to a new grid and even reproject data\n\nds.air.interp(lat=denver_lat, lon=360+denver_lon, method='linear')\n\nsel() and interp() can also be used on Dataset objects.\n\nds.sel(lat=slice(41,37), lon=slice(360-109,360-102))\n\n\nds.interp(lat=denver_lat, lon=360+denver_lon, method='linear')"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#analysis",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#analysis",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Analysis",
+    "text": "Analysis\nAs a simple example, let’s try to calculate a mean field for the whole time range.\n\nds.mean(dim='time').hvplot()\n\nWe can also calculate a zonal mean (averaging over longitude)\n\nds.mean(dim='lon').hvplot()\n\nOther aggregation methods include min(), max(), std(), along with others.\n\nds.std(dim='time').hvplot()\n\nThe data we have are in 6h timesteps. This can be resampled to daily or monthly. If you are familiar with pandas, xarray uses the same methods.\n\nds_mon = ds.resample(time='M').mean()\nds_mon\n\nThis is a really short time series but as an example, let’s calculate a monthly climatology (at least for 2 months). For this we can use groupby()\n\nds_clim = ds_mon.groupby(ds_mon.time.dt.month).mean()\nds_clim"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Plot results",
+    "text": "Plot results\nFinally, let’s plot the results! This will plot the lat/lon axes of the original ds DataArray.\n\nds_clim.air.sel(month=10).hvplot()"
+  },
+  {
+    "objectID": "tutorials/cloud/index.html",
+    "href": "tutorials/cloud/index.html",
+    "title": "CryoCloud / Openscapes",
+    "section": "",
+    "text": "CryoCloud / Openscapes\nPlaceholder"
+  },
+  {
     "objectID": "tutorials/setup.html",
     "href": "tutorials/setup.html",
     "title": "Setup for tutorials",
@@ -168,130 +294,67 @@
     "text": "How do I end my session?\n(Also see How do I end my Openscapes session? Will I lose all of my work?) When you are finished working for the day it is important to explicitly log out of your Openscapes session. The reason for this is it will save money and is a good habit to be in. When you keep a session active it uses up AWS resources and keeps a series of virtual machines deployed.\nStopping the server happens automatically when you log out, so navigate to “File -&gt; Log Out” and click “Log Out”!\n\n\n\nhub-control-panel-button (credit: UW Hackweek)\n\n\n!!! NOTE “logging out” - Logging out will NOT cause any of your work to be lost or deleted. It simply shuts down some resources. It would be equivalent to turning off your desktop computer at the end of the day."
   },
   {
-    "objectID": "tutorials/cloud/index.html",
-    "href": "tutorials/cloud/index.html",
-    "title": "CryoCloud / Openscapes",
-    "section": "",
-    "text": "CryoCloud / Openscapes\nPlaceholder"
+    "objectID": "tutorials/data-access/index.html#tutorial-overview",
+    "href": "tutorials/data-access/index.html#tutorial-overview",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "1. Tutorial Overview",
+    "text": "1. Tutorial Overview\nNote: This is an updated version of the notebook that was presented to the NSIDC DAAC User Working Group in May 2022\nThis notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the earthaccess package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. Direct Access is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.\nThe Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of analysis in place. NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2. If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.\nAs an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using xarray. Land Ice Heights are then plotted using hvplot.\nearthaccess is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both DAAC-hosted and cloud-hosted data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess\n\nCredits\nThe notebook was created by Andy Barrett, NSIDC, updated by Jennifer Roebuck, NSIDC, and is based on notebooks developed by Luis Lopez and Mikala Beig, NSIDC.\nFor questions regarding the notebook, or to report problems, please create a new issue in the NSIDC-Data-Tutorials repo.\n\n\nLearning Objectives\nBy the end of this demonstration you will be able to:\n1. use earthaccess to search for ICESat-2 data using spatial and temporal filters and explore search results;\n2. open data granules using direct access to the ICESat-2 S3 bucket;\n3. load a HDF5 group into an xarray.Dataset;\n4. visualize the land ice heights using hvplot.\n\n\nPrerequisites\n\nAn Amazon Web Services (AWS) account. You will be accessing data in Amazon Web Services (AWS) Simple Storage Service (S3) buckets. This requires an AWS account, for details on how to set one up see here.\nAn EC2 instance in the us-west-2 region is set up. NASA cloud-hosted data is in Amazon Region us-west2. So you also need an EC2 instance in the us-west-2 region. An EC2 instance is a virtual computer that you create to perform processing operations in place of using your own desktop or laptop. Details on how to set up an instance can be found here.\nAn Earthdata Login is required for data access. If you don’t have one, you can register for one here.\nA .netrc file, that contains your Earthdata Login credentials, in your home directory. The current recommended practice for authentication is to create a .netrc file in your home directory following these instructions (Step 1) and to use the .netrc file for authentication when required for data access during the tutorial.\nThe nsidc-tutorials environment is setup and activated. This README has setup instructions.\n\n\n\nExample of end product\nAt the end of this tutorial, the following figure will be generated:\n\n\n\n\n\nTime requirement\nAllow approximately 20 minutes to complete this tutorial."
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html",
-    "href": "tutorials/science/Intro_xarray_hvplot.html",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "",
-    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+    "objectID": "tutorials/data-access/index.html#tutorial-steps",
+    "href": "tutorials/data-access/index.html#tutorial-steps",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "2. Tutorial steps",
+    "text": "2. Tutorial steps"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "",
-    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+    "objectID": "tutorials/data-access/index.html#import-packages",
+    "href": "tutorials/data-access/index.html#import-packages",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "Import Packages",
+    "text": "Import Packages\nThe first step in any python script or notebook is to import packages. This tutorial requires the following packages: - earthaccess, which enables Earthdata Login authentication and retrieves AWS credentials; enables collection and granule searches; and S3 access; - xarray, used to load data; - hvplot, used to visualize land ice height data.\nWe are going to import the whole earthaccess package.\nWe will also import the whole xarray package but use a standard short name xr, using the import &lt;package&gt; as &lt;short_name&gt; syntax. We could use anything for a short name but xr is an accepted standard that most xarray users are familiar with.\nWe only need the xarray module from hvplot so we import that using the import &lt;package&gt;.&lt;module&gt; syntax.\n\n# For searching NASA data\nimport earthaccess\n\n# For reading data, analysis and plotting\nimport xarray as xr\nimport hvplot.xarray\nimport pprint"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "What is xarray",
-    "text": "What is xarray\nxarray is an open-source project and python package to work with labelled multi-dimensional arrays. It is leverages numpy, pandas, matplotlib and dask to build Dataset and DataArray objects with built-in methods to subset, analyze, interpolate, and plot multi-dimensional data. It makes working with multi-dimensional data cubes efficient and fun. It will change your life for the better. You’ll be more attractive, more interesting, and better equiped to take on lifes challenges."
+    "objectID": "tutorials/data-access/index.html#authenticate",
+    "href": "tutorials/data-access/index.html#authenticate",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "Authenticate",
+    "text": "Authenticate\nThe first step is to get the correct authentication that will allow us to get cloud-hosted ICESat-2 data. This is all done through Earthdata Login. The login method also gets the correct AWS credentials.\nLogin requires your Earthdata Login username and password. The login method will automatically search for these credentials as environment variables or in a .netrc file, and if those aren’t available it will prompt us to enter our username and password. We use a .netrc strategy. A .netrc file is a text file located in our home directory that contains login information for remote machines. If we don’t have a .netrc file, login can create one for us.\nearthaccess.login(strategy='interactive', persist=True)\n\nauth = earthaccess.login()"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "What you will learn from this tutorial",
-    "text": "What you will learn from this tutorial\nIn this tutorial you will learn how to:\n\nload a netcdf file into xarray\ninterrogate the Dataset and understand the difference between DataArray and Dataset\nsubset a Dataset\ncalculate annual and monthly mean fields\ncalculate a time series of zonal means\nplot these results\n\nAs always, we’ll start by importing xarray. We’ll follow convention by giving the module the shortname xr\n\nimport xarray as xr\nxr.set_options(keep_attrs=True)\nimport hvplot.xarray\n\nI’m going to use one of xarray’s tutorial datasets. In this case, air temperature from the NCEP reanalysis. I’ll assign the result of the open_dataset to ds. I may change this to access a dataset directly\n\nds = xr.tutorial.open_dataset(\"air_temperature\")\n\nAs we are in an interactive environment, we can just type ds to see what we have.\n\nds\n\nFirst thing to notice is that ds is an xarray.Dataset object. It has dimensions, lat, lon, and time. It also has coordinate variables with the same names as these dimensions. These coordinate variables are 1-dimensional. This is a NetCDF convention. The Dataset contains one data variable, air. This has dimensions (time, lat, lon).\nClicking on the document icon reveals attributes for each variable. Clicking on the disk icon reveals a representation of the data.\nEach of the data and coordinate variables can be accessed and examined using the variable name as a key.\n\nds.air\n\n\nds['air']\n\nThese are xarray.DataArray objects. This is the basic building block for xarray.\nVariables can also be accessed as attributes of ds.\n\nds.time\n\nA major difference between accessing a variable as an attribute versus using a key is that the attribute is read-only but the key method can be used to update the variable. For example, if I want to convert the units of air from Kelvin to degrees Celsius.\n\nds['air'] = ds.air - 273.15\n\nThis approach can also be used to add new variables\n\nds['air_kelvin'] = ds.air + 273.15\n\n\nds\n\nIt is helpful to update attributes such as units, this saves time, confusion and mistakes, especially when you save the dataset.\n\nds['air'].attrs['units'] = 'degC'\n\n\nds"
+    "objectID": "tutorials/data-access/index.html#search-for-icesat-2-collections",
+    "href": "tutorials/data-access/index.html#search-for-icesat-2-collections",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "Search for ICESat-2 Collections",
+    "text": "Search for ICESat-2 Collections\nearthaccess leverages the Common Metadata Repository (CMR) API to search for collections and granules. Earthdata Search also uses the CMR API.\nWe can use the search_datasets method to search for ICESat-2 collections by setting keyword='ICESat-2'.\nThis will display the number of data collections (data sets) that meet this search criteria.\n\nQuery = earthaccess.search_datasets(keyword = 'ICESat-2')\n\nIn this case there are 65 collections that have the keyword ICESat-2.\nThe search_datasets method returns a python list of DataCollection objects. We can view the metadata for each collection in long form by passing a DataCollection object to print or as a summary using the summary method. We can also use the pprint function to Pretty Print each object.\nWe will do this for the first 10 results (objects).\n\nfor collection in Query[:10]:\n    pprint.pprint(collection.summary(), sort_dicts=True, indent=4)\n    print('')\n    \n\nFor each collection, summary returns a subset of fields from the collection metadata and the Unified Metadata Model (UMM): - concept-id is a unique id for the collection. It consists of an alphanumeric code and the provider-id specific to the DAAC (Distributed Active Archive Center). You can use the concept_id to search for data granules. - short_name is a quick way of referring to a collection (instead of using the full title). It can be found on the collection landing page underneath the collection title after ‘DATA SET ID’. See the table below for a list of the shortnames for ICESat-2 collections. - version is the version of each collection. - file-type gives information about the file format of the collection granules. - get-data is a collection of URLs that can be used to access the data, collection landing pages and data tools. - cloud-info this is for cloud-hosted data and provides additional information about the location of the S3 bucket that holds the data and where to get temporary AWS S3 credentials to access the S3 buckets. earthaccess handles these credentials and the links to the S3 buckets, so in general you won’t need to worry about this information.\nFor the ICESat-2 search results, within the concept-id, there is a provider-id; NSIDC_ECS and NSIDC_CPRD. NSIDC_ECS which is for the on-prem collections and NSIDC_CPRD is for the cloud-hosted collections.\nFor ICESat-2, ShortNames are generally how different products are referred to.\n\n\n\n\n\n\n\nShortName\nProduct Description\n\n\n\n\nATL03\nATLAS/ICESat-2 L2A Global Geolocated Photon Data\n\n\nATL06\nATLAS/ICESat-2 L3A Land Ice Height\n\n\nATL07\nATLAS/ICESat-2 L3A Sea Ice Height\n\n\nATL08\nATLAS/ICESat-2 L3A Land and Vegetation Height\n\n\nATL09\nATLAS/ICESat-2 L3A Calibrated Backscatter Profiles and Atmospheric Layer Characteristics\n\n\nATL10\nATLAS/ICESat-2 L3A Sea Ice Freeboard\n\n\nATL11\nATLAS/ICESat-2 L3B Slope-Corrected Land Ice Height Time Series\n\n\nATL12\nATLAS/ICESat-2 L3A Ocean Surface Height\n\n\nATL13\nATLAS/ICESat-2 L3A Along Track Inland Surface Water Data\n\n\n\n\nSearch for cloud-hosted data\nFor most collections, to search for only data in the cloud, the cloud_hosted method can be used.\n\nQuery = earthaccess.search_datasets(\n    keyword = 'ICESat-2',\n    cloud_hosted = True\n)"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Subsetting and Indexing",
-    "text": "Subsetting and Indexing\nSubsetting and indexing methods depend on whether you are working with a Dataset or DataArray. A DataArray can be accessed using positional indexing just like a numpy array. To access the temperature field for the first time step, you do the following.\n\nds['air'][0,:,:]\n\nNote this returns a DataArray with coordinates but not attributes.\nHowever, the real power is being able to access variables using coordinate variables. I can get the same subset using the following. (It’s also more explicit about what is being selected and robust in case I modify the DataArray and expect the same output.)\n\nds['air'].sel(time='2013-01-01').time\n\n\nds.air.sel(time='2013-01-01')\n\nI can also do slices. I’ll extract temperatures for the state of Colorado. The bounding box for the state is [-109 E, -102 E, 37 N, 41 N].\nIn the code below, pay attention to both the order of the coordinates and the range of values. The first value of the lat coordinate variable is 41 N, the second value is 37 N. Unfortunately, xarray expects slices of coordinates to be in the same order as the coordinates. Note lon is 0 to 360 not -180 to 180, and I let python calculate it for me within the slice.\n\nds.air.sel(lat=slice(41.,37.), lon=slice(360-109,360-102))\n\nWhat if we want temperature for a point, for example Denver, CO (39.72510678889283 N, -104.98785545855408 E). xarray can handle this! If we just want data from the nearest grid point, we can use sel and specify the method as “nearest”.\n\ndenver_lat, denver_lon = 39.72510678889283, -104.98785545855408\n\n\nds.air.sel(lat=denver_lat, lon=360+denver_lon, method='nearest').hvplot()\n\nIf we want to interpolate, we can use interp(). In this case I use linear or bilinear interpolation.\ninterp() can also be used to resample data to a new grid and even reproject data\n\nds.air.interp(lat=denver_lat, lon=360+denver_lon, method='linear')\n\nsel() and interp() can also be used on Dataset objects.\n\nds.sel(lat=slice(41,37), lon=slice(360-109,360-102))\n\n\nds.interp(lat=denver_lat, lon=360+denver_lon, method='linear')"
+    "objectID": "tutorials/data-access/index.html#search-a-data-set-using-spatial-and-temporal-filters",
+    "href": "tutorials/data-access/index.html#search-a-data-set-using-spatial-and-temporal-filters",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "Search a data set using spatial and temporal filters",
+    "text": "Search a data set using spatial and temporal filters\nWe can use the search_data method to search for granules within a data set by location and time using spatial and temporal filters. In this example, we will search for data granules from the ATL06 verison 006 cloud-hosted data set over the Juneau Icefield, AK, for March and April 2020.\nThe temporal range is identified with standard date strings, and latitude-longitude corners of a bounding box is specified. Polygons and points, as well as shapefiles can also be specified.\nThis will display the number of granules that match our search.\n\nresults = earthaccess.search_data(\n    short_name = 'ATL06',\n    version = '006',\n    cloud_hosted = True,\n    bounding_box = (-134.7,58.9,-133.9,59.2),\n    temporal = ('2020-03-01','2020-04-30'),\n)\n\nTo display the rendered metadata, including the download link, granule size and two images, we will use display. In the example below, all 4 results are shown.\nThe download link is https and can be used download the granule to your local machine. This is similar to downloading DAAC-hosted data but in this case the data are coming from the Earthdata Cloud. For NASA data in the Earthdata Cloud, there is no charge to the user for egress from AWS Cloud servers. This is not the case for other data in the cloud.\nNote the [None, None, None, None] that is displayed at the end can be ignored, it has no meaning in relation to the metadata.\n\n[display(r) for r in results]"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#analysis",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#analysis",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Analysis",
-    "text": "Analysis\nAs a simple example, let’s try to calculate a mean field for the whole time range.\n\nds.mean(dim='time').hvplot()\n\nWe can also calculate a zonal mean (averaging over longitude)\n\nds.mean(dim='lon').hvplot()\n\nOther aggregation methods include min(), max(), std(), along with others.\n\nds.std(dim='time').hvplot()\n\nThe data we have are in 6h timesteps. This can be resampled to daily or monthly. If you are familiar with pandas, xarray uses the same methods.\n\nds_mon = ds.resample(time='M').mean()\nds_mon\n\nThis is a really short time series but as an example, let’s calculate a monthly climatology (at least for 2 months). For this we can use groupby()\n\nds_clim = ds_mon.groupby(ds_mon.time.dt.month).mean()\nds_clim"
+    "objectID": "tutorials/data-access/index.html#use-direct-access-to-open-load-and-display-data-stored-on-s3",
+    "href": "tutorials/data-access/index.html#use-direct-access-to-open-load-and-display-data-stored-on-s3",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "Use Direct-Access to open, load and display data stored on S3",
+    "text": "Use Direct-Access to open, load and display data stored on S3\nDirect-access to data from an S3 bucket is a two step process. First, the files are opened using the open method. The auth object created at the start of the notebook is used to provide Earthdata Login authentication and AWS credentials.\nThe next step is to load the data. In this case, data are loaded into an xarray.Dataset. Data could be read into numpy arrays or a pandas.Dataframe. However, each granule would have to be read using a package that reads HDF5 granules such as h5py. xarray does this all under-the-hood in a single line but for a single group in the HDF5 granule*.\n*ICESat-2 measures photon returns from 3 beam pairs numbered 1, 2 and 3 that each consist of a left and a right beam. In this case, we are interested in the left ground track (gt) of beam pair 1.\n\nfiles = earthaccess.open(results)\nds = xr.open_dataset(files[1], group='/gt1l/land_ice_segments')\n\n\nds\n\nhvplot is an interactive plotting tool that is useful for exploring data.\n\nds['h_li'].hvplot(kind='scatter', s=2)"
   },
   {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Plot results",
-    "text": "Plot results\nFinally, let’s plot the results! This will plot the lat/lon axes of the original ds DataArray.\n\nds_clim.air.sel(month=10).hvplot()"
+    "objectID": "tutorials/data-access/index.html#learning-outcomes-recap",
+    "href": "tutorials/data-access/index.html#learning-outcomes-recap",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "3. Learning outcomes recap",
+    "text": "3. Learning outcomes recap\nWe have learned how to: 1. use earthaccess to search for ICESat-2 data using spatial and temporal filters and explore search results; 2. open data granules using direct access to the ICESat-2 S3 bucket; 3. load a HDF5 group into an xarray.Dataset; 4. visualize the land ice heights using hvplot."
   },
   {
-    "objectID": "tutorials/prerequisites.html",
-    "href": "tutorials/prerequisites.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
-  },
-  {
-    "objectID": "tutorials/prerequisites.html#prerequisites",
-    "href": "tutorials/prerequisites.html#prerequisites",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
-  },
-  {
-    "objectID": "tutorials/further-resources.html",
-    "href": "tutorials/further-resources.html",
-    "title": "Additional resources",
-    "section": "",
-    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
-  },
-  {
-    "objectID": "tutorials/further-resources.html#a-growing-list-of-resources",
-    "href": "tutorials/further-resources.html#a-growing-list-of-resources",
-    "title": "Additional resources",
-    "section": "",
-    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
-  },
-  {
-    "objectID": "tutorials/further-resources.html#additional-tutorials",
-    "href": "tutorials/further-resources.html#additional-tutorials",
-    "title": "Additional resources",
-    "section": "Additional tutorials",
-    "text": "Additional tutorials\n\nData_Access__Direct_S3_Access__PODAAC_ECCO_SSH using CMR-STAC API to retrieve S3 links\nDirect access to ECCO data in S3 (from us-west-2) - Direct S3 access example with netCDF data\nDirect_S3_Access__gdalvrt\nDirect_S3_Access__rioxarray_clipping\nCalculate black-sky, white-sky, and actual albedo (MCD43A) from MCD43A1 BRDF Parameters using R\nXarray Zonal Statistics"
-  },
-  {
-    "objectID": "tutorials/cloud/cloud-paradigm.html",
-    "href": "tutorials/cloud/cloud-paradigm.html",
-    "title": "NASA and the Cloud Paradigm",
-    "section": "",
-    "text": "Slides that introduce NASA Earthdata Cloud & the Cloud Paradigm."
-  },
-  {
-    "objectID": "tutorials/schedule.html",
-    "href": "tutorials/schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "The SSC GEDI/ICESAT-2 Workshop will take place on November 15th.\nNote, hands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access."
-  },
-  {
-    "objectID": "tutorials/schedule.html#workshop-schedule",
-    "href": "tutorials/schedule.html#workshop-schedule",
-    "title": "Schedule",
-    "section": "Workshop Schedule",
-    "text": "Workshop Schedule\n\n\n\nHour\nEvent\nInstructor\n\n\n\n\n3:00 pm CST/MX\nWelcome and Overview of Tutorial\n\n\n\n3:10 pm\nCryoCloud - A Shared Cloud Platform for NASA\nTasha Snow (Colorado School of Mines)\n\n\n3:25 pm\nHub task - clone repo\n\n\n\n3:35 pm\nBreak (Q&A)\n\n\n\n3:40 pm\nICESat-2 Data Access, NASA DAAC @ NSIDC\nLuis Alberto Lopez Espinosa  (NSIDC, University of Colorado)\n\n\n4:00 pm\nBreak (Q&A)\n\n\n\n4:10 pm\nThe icepyx Software Library and Community\nRachel Wegener (University of Maryland)\n\n\n4:30 pm\nBreak\n\n\n\n4:40 pm\nAccess and Discovery of GEDI Data via the DAAC at the ORNL\nRupesh Shrestha (Oakridge National Laboratory, ORNL-DAAC)\n\n\n5:00 pm\nBreak (Q&A)\n\n\n\n5:10 pm\nGEDI Data User Resources at the LP DAAC\nMahsa Jami (NASA LP-DAAC)\n\n\n5:30 pm\nBreak (Q&A)\n\n\n\n5:40 pm\nEjemplos de aplicaciones de uso de éxito GEDI y posibilidades(Mapas, Reforestacion, Especie protegida)\nAdrian Pascual\n\n\n6:00 pm CST/MX\nEnd of Tutorial\n\n\n\n\n\nThank you!\nJupyterHub: close out.\n\nclose out your JupyterHub instance if you are finished for the day, following these instructions.\n\nYou will continue to have access to the 2i2c JupyterHub in AWS for a week following the SSC GEDI/ICESAT-2 Cloud Workshop. You may use that time to continue work and all learn more about migrating data accass routines and science workflows to the Cloud. This cloud compute environment is supported by the NASA Openscapes project."
-  },
-  {
-    "objectID": "tutorials/schedule.html#getting-help-during-the-workshop",
-    "href": "tutorials/schedule.html#getting-help-during-the-workshop",
-    "title": "Schedule",
-    "section": "Getting help during the Workshop",
-    "text": "Getting help during the Workshop\nPlease use the webex chat platform to ask any questions you have during the workshop."
-  },
-  {
-    "objectID": "tutorials/index.html",
-    "href": "tutorials/index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live demos during the Workshop, and are available for self-paced learning.\nHands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access.\nTutorials are markdown (.md) and Jupyter (.ipynb) notebooks, and are available on GitHub"
+    "objectID": "tutorials/data-access/index.html#additional-resources",
+    "href": "tutorials/data-access/index.html#additional-resources",
+    "title": "Accessing and working with ICESat-2 data in the cloud",
+    "section": "4. Additional resources",
+    "text": "4. Additional resources\nFor general information about NSIDC DAAC data in the Earthdata Cloud:\nFAQs About NSIDC DAAC’s Earthdata Cloud Migration\nNASA Earthdata Cloud Data Access Guide\nAdditional tutorials and How Tos:\nNASA Earthdata Cloud Cookbook"
   },
   {
     "objectID": "how-tos/data-access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.html",
