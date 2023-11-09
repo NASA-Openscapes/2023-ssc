@@ -14,7 +14,7 @@ website:
     right: 
       - sidebar:welcome
       - icon: github
-        href: https://github.com/NASA-Openscapes/2023-scc
+        href: https://github.com/NASA-Openscapes/2023-ssc
  
   sidebar:
     - id: welcome
@@ -58,6 +58,3 @@ format:
     toc: true
     grid:
       sidebar-width: 300px
-
-filters:
-  - quarto

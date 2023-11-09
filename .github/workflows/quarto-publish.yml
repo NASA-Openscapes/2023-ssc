@@ -11,28 +11,15 @@ jobs:
         shell: bash -l {0}
     steps:
     - uses: actions/checkout@v2
-    - uses: conda-incubator/setup-miniconda@v2
+    - name: "Install Conda environment with Micromamba"
+      uses: mamba-org/setup-micromamba@v1
       with:
-        python-version: 3.8
-        channels: conda-forge
-        mamba-version: "*"
-        activate-environment: quarto-import
-        environment-file: _import/environment.yml
-
-    - name: "Import external notebooks"
-      working-directory: ./_import
-      run: |
-        conda info
-        pytest
-        python quarto_import.py -f assets.json
+        cache-env: true
+        environment-file: binder/conda-linux-64.lock
+        environment-name: openscapes
 
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
-      with:
-        # To install LaTeX to build PDF book 
-        tinytex: true 
-        # uncomment below and fill to pin a version
-        # version: 0.9.600
 
     - name: Publish to GitHub Pages (and render)
       uses: quarto-dev/quarto-actions/publish@v2
