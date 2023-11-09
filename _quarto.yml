@@ -1,0 +1,63 @@
+project: 
+  type: website
+
+website:
+  title: "2023 GEDI/ICESAT-2 Workshop"
+  site-url: https://nasa-openscapes.github.io/2023-ssc
+  repo-url: https://github.com/NASA-Openscapes/2023-ssc
+  repo-actions: [edit, issue]
+  page-navigation: true
+  page-footer: "NASA Openscapes (2023). Espacio y Sostenibilidad Colloqium, Guadalajara, Mexico"
+ 
+  navbar: 
+    background: primary
+    right: 
+      - sidebar:welcome
+      - icon: github
+        href: https://github.com/NASA-Openscapes/2023-scc
+ 
+  sidebar:
+    - id: welcome
+      title: "Menu"
+      logo: https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/espacio-logo.png
+      style: "docked"
+      collapse-level: 1
+      align: left
+      contents:
+        - section: "Welcome / Bienvenidos"
+          contents:
+            - index.md
+            - tutorials/prerequisites.md 
+            - tutorials/schedule.md
+        - section: "Cloud Computing"
+          contents: 
+            - href: tutorials/cloud/cloud-paradigm.md
+              text: "NASA and the Cloud"
+            - href: tutorials/cloud/index.md
+              text: "CryoCloud"
+        - section: "Data Discovery and Access"
+          contents: 
+            - href: tutorials/data-access/earthdata-search.md
+              text: "Earthdata Search"
+            - href: tutorials/data-access/earthaccess.md
+              text: "Programmatic Access"
+            - href: tutorials/data-access/icepyx.md
+              text: "Icepyx"
+        - section: "GEDI / IS2 Science Tutorial"
+          contents: 
+            - tutorials/index.md
+          
+format:
+  html:
+    theme:
+      light: sandstone
+      dark: [sandstone, theme-dark.scss]
+    code-background: true
+    code-copy: true
+    css: styles.css
+    toc: true
+    grid:
+      sidebar-width: 300px
+
+filters:
+  - quarto
