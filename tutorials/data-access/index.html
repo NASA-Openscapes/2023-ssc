@@ -311,11 +311,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview"><strong>1. Tutorial Overview</strong></a>
   <ul class="collapse">
+  <li><a href="#intro-update" id="toc-intro-update" class="nav-link" data-scroll-target="#intro-update">Intro (update)</a></li>
   <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits"><strong>Credits</strong></a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><strong>Learning Objectives</strong></a></li>
+  <li><a href="#learning-objectives-update" id="toc-learning-objectives-update" class="nav-link" data-scroll-target="#learning-objectives-update"><strong>Learning Objectives [UPDATE] </strong></a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><strong>Prerequisites</strong></a></li>
-  <li><a href="#example-of-end-product" id="toc-example-of-end-product" class="nav-link" data-scroll-target="#example-of-end-product"><strong>Example of end product</strong></a></li>
-  <li><a href="#time-requirement" id="toc-time-requirement" class="nav-link" data-scroll-target="#time-requirement"><strong>Time requirement</strong></a></li>
   </ul></li>
   <li><a href="#tutorial-steps" id="toc-tutorial-steps" class="nav-link" data-scroll-target="#tutorial-steps"><strong>2. Tutorial steps</strong></a></li>
   <li><a href="#import-packages" id="toc-import-packages" class="nav-link" data-scroll-target="#import-packages">Import Packages</a></li>
@@ -351,23 +350,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<center>
-<p><img src="./img/nsidc_logo.png"></p>
-</center>
 <section id="tutorial-overview" class="level2">
 <h2 class="anchored" data-anchor-id="tutorial-overview"><strong>1. Tutorial Overview</strong></h2>
-<p><strong>Note: This is an updated version of the notebook that was presented to the NSIDC DAAC User Working Group in May 2022</strong></p>
+<p>Outline: * ICESat-2 Data Access, NASA DAAC @ NSIDC * Overview of ICESat-2 Mission and land products (<a href="https://docs.google.com/presentation/d/1SZs7dyZ1K2CSVXS0txZ-LIvc-5Brn_D0pBEtzfQmvcE/edit#slide=id.g2374337d1d0_0_184">see USFS Application Workshop slides</a> * NSIDC DAAC resources / tools * Walk through myriad options with different capabilities/use cases * Modified version of <a href="https://icesat-2-2023.hackweek.io/tutorials/data-access-and-format/overview.html">table from IS2 Hackweek</a> * Basic earthaccess demo of ATL08 access * Need common area / time of interest across IS2 / GEDI tutorials</p>
+<ul>
+<li>The icepyx Software Library and Community</li>
+</ul>
+<section id="intro-update" class="level3">
+<h3 class="anchored" data-anchor-id="intro-update">Intro (update)</h3>
 <p>This notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the <code>earthaccess</code> package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. <strong>Direct Access</strong> is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.</p>
 <p>The Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of <em>analysis in place</em>. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2.</strong> If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.</p>
 <p>As an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using <code>xarray</code>. Land Ice Heights are then plotted using <code>hvplot</code>.</p>
 <p><code>earthaccess</code> is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both <em>DAAC-hosted</em> and <em>cloud-hosted</em> data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess</p>
+</section>
 <section id="credits" class="level3">
 <h3 class="anchored" data-anchor-id="credits"><strong>Credits</strong></h3>
-<p>The notebook was created by Andy Barrett, NSIDC, updated by Jennifer Roebuck, NSIDC, and is based on notebooks developed by Luis Lopez and Mikala Beig, NSIDC.</p>
-<p>For questions regarding the notebook, or to report problems, please create a new issue in the <a href="https://github.com/nsidc/NSIDC-Data-Tutorials/issues">NSIDC-Data-Tutorials repo</a>.</p>
+<p>The notebook was created by …</p>
 </section>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives"><strong>Learning Objectives</strong></h3>
+<section id="learning-objectives-update" class="level3">
+<h3 class="anchored" data-anchor-id="learning-objectives-update"><strong>Learning Objectives [UPDATE] </strong></h3>
 <p>By the end of this demonstration you will be able to:<br>
 1. use <code>earthaccess</code> to search for ICESat-2 data using spatial and temporal filters and explore search results;<br>
 2. open data granules using direct access to the ICESat-2 S3 bucket;<br>
@@ -376,24 +377,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="prerequisites"><strong>Prerequisites</strong></h3>
-<ol type="1">
-<li>An Amazon Web Services (AWS) account. You will be accessing data in Amazon Web Services (AWS) Simple Storage Service (S3) buckets. This requires an AWS account, for details on how to set one up see <a href="https://nsidc.org/data/user-resources/help-center/nasa-earthdata-cloud-data-access-guide#anchor-1">here</a>.</li>
-<li>An EC2 instance in the us-west-2 region is set up. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So you also need an EC2 instance in the us-west-2 region.</strong> An EC2 instance is a virtual computer that you create to perform processing operations in place of using your own desktop or laptop. Details on how to set up an instance can be found <a href="https://nsidc.org/data/user-resources/help-center/nasa-earthdata-cloud-data-access-guide#anchor-1">here</a>.</li>
-<li>An Earthdata Login is required for data access. If you don’t have one, you can register for one <a href="https://urs.earthdata.nasa.gov/">here</a>.</li>
-<li>A .netrc file, that contains your Earthdata Login credentials, in your home directory. The current recommended practice for authentication is to create a .netrc file in your home directory following <a href="https://nsidc.org/support/how/how-do-i-programmatically-request-data-services">these instructions</a> (Step 1) and to use the .netrc file for authentication when required for data access during the tutorial.</li>
-<li>The <em>nsidc-tutorials</em> environment is setup and activated. This <a href="https://github.com/nsidc/NSIDC-Data-Tutorials/blob/main/README.md">README</a> has setup instructions.</li>
-</ol>
-</section>
-<section id="example-of-end-product" class="level3">
-<h3 class="anchored" data-anchor-id="example-of-end-product"><strong>Example of end product</strong></h3>
-At the end of this tutorial, the following figure will be generated:
-<center>
-<img src="./img/atl06_example_end_product.png">
-</center>
-</section>
-<section id="time-requirement" class="level3">
-<h3 class="anchored" data-anchor-id="time-requirement"><strong>Time requirement</strong></h3>
-<p>Allow approximately 20 minutes to complete this tutorial.</p>
+<p>See <a href="https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html">Prerequisites</a></p>
 </section>
 </section>
 <section id="tutorial-steps" class="level2">
