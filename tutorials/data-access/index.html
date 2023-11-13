@@ -311,12 +311,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview"><strong>1. Tutorial Overview</strong></a>
   <ul class="collapse">
-  <li><a href="#intro-update" id="toc-intro-update" class="nav-link" data-scroll-target="#intro-update">Intro (update)</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits"><strong>Credits</strong></a></li>
   <li><a href="#learning-objectives-update" id="toc-learning-objectives-update" class="nav-link" data-scroll-target="#learning-objectives-update"><strong>Learning Objectives [UPDATE] </strong></a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><strong>Prerequisites</strong></a></li>
   </ul></li>
-  <li><a href="#tutorial-steps" id="toc-tutorial-steps" class="nav-link" data-scroll-target="#tutorial-steps"><strong>2. Tutorial steps</strong></a></li>
+  <li><a href="#nasas-icesat-2-mission-land-and-water-products" id="toc-nasas-icesat-2-mission-land-and-water-products" class="nav-link" data-scroll-target="#nasas-icesat-2-mission-land-and-water-products">**2. NASA’s ICESat-2 Mission: Land and Water Products</a></li>
+  <li><a href="#overview-of-icesat-2-nsidc-daac-data-tools-and-resources" id="toc-overview-of-icesat-2-nsidc-daac-data-tools-and-resources" class="nav-link" data-scroll-target="#overview-of-icesat-2-nsidc-daac-data-tools-and-resources">**3. Overview of ICESat-2 NSIDC DAAC Data, Tools, and Resources</a></li>
+  <li><a href="#search-and-access-of-atl08-using-earthaccess" id="toc-search-and-access-of-atl08-using-earthaccess" class="nav-link" data-scroll-target="#search-and-access-of-atl08-using-earthaccess">**4. Search and access of ATL08 using <code>earthaccess</code></a></li>
   <li><a href="#import-packages" id="toc-import-packages" class="nav-link" data-scroll-target="#import-packages">Import Packages</a></li>
   <li><a href="#authenticate" id="toc-authenticate" class="nav-link" data-scroll-target="#authenticate">Authenticate</a></li>
   <li><a href="#search-for-icesat-2-collections" id="toc-search-for-icesat-2-collections" class="nav-link" data-scroll-target="#search-for-icesat-2-collections">Search for ICESat-2 Collections</a>
@@ -352,16 +354,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="tutorial-overview" class="level2">
 <h2 class="anchored" data-anchor-id="tutorial-overview"><strong>1. Tutorial Overview</strong></h2>
-<p>Outline: * ICESat-2 Data Access, NASA DAAC @ NSIDC * Overview of ICESat-2 Mission and land products (<a href="https://docs.google.com/presentation/d/1SZs7dyZ1K2CSVXS0txZ-LIvc-5Brn_D0pBEtzfQmvcE/edit#slide=id.g2374337d1d0_0_184">see USFS Application Workshop slides</a> * NSIDC DAAC resources / tools * Walk through myriad options with different capabilities/use cases * Modified version of <a href="https://icesat-2-2023.hackweek.io/tutorials/data-access-and-format/overview.html">table from IS2 Hackweek</a> * Basic earthaccess demo of ATL08 access * Need common area / time of interest across IS2 / GEDI tutorials</p>
 <ul>
 <li>The icepyx Software Library and Community</li>
 </ul>
-<section id="intro-update" class="level3">
-<h3 class="anchored" data-anchor-id="intro-update">Intro (update)</h3>
-<p>This notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the <code>earthaccess</code> package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. <strong>Direct Access</strong> is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.</p>
-<p>The Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of <em>analysis in place</em>. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2.</strong> If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.</p>
-<p>As an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using <code>xarray</code>. Land Ice Heights are then plotted using <code>hvplot</code>.</p>
-<p><code>earthaccess</code> is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both <em>DAAC-hosted</em> and <em>cloud-hosted</em> data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 </section>
 <section id="credits" class="level3">
 <h3 class="anchored" data-anchor-id="credits"><strong>Credits</strong></h3>
@@ -380,8 +377,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>See <a href="https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html">Prerequisites</a></p>
 </section>
 </section>
-<section id="tutorial-steps" class="level2">
-<h2 class="anchored" data-anchor-id="tutorial-steps"><strong>2. Tutorial steps</strong></h2>
+<section id="nasas-icesat-2-mission-land-and-water-products" class="level2">
+<h2 class="anchored" data-anchor-id="nasas-icesat-2-mission-land-and-water-products">**2. NASA’s ICESat-2 Mission: Land and Water Products</h2>
+<p><a href="https://docs.google.com/presentation/d/1SZs7dyZ1K2CSVXS0txZ-LIvc-5Brn_D0pBEtzfQmvcE/edit#slide=id.g2374337d1d0_0_184">see USFS Application Workshop slides</a></p>
+</section>
+<section id="overview-of-icesat-2-nsidc-daac-data-tools-and-resources" class="level2">
+<h2 class="anchored" data-anchor-id="overview-of-icesat-2-nsidc-daac-data-tools-and-resources">**3. Overview of ICESat-2 NSIDC DAAC Data, Tools, and Resources</h2>
+<ul>
+<li>Walk through myriad options with different capabilities/use cases</li>
+<li>Modified version of <a href="https://icesat-2-2023.hackweek.io/tutorials/data-access-and-format/overview.html">table from IS2 Hackweek</a></li>
+</ul>
+</section>
+<section id="search-and-access-of-atl08-using-earthaccess" class="level2">
+<h2 class="anchored" data-anchor-id="search-and-access-of-atl08-using-earthaccess">**4. Search and access of ATL08 using <code>earthaccess</code></h2>
+<ul>
+<li>Need common area / time of interest across IS2 / GEDI tutorials</li>
+</ul>
+<p>This notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the <code>earthaccess</code> package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. <strong>Direct Access</strong> is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.</p>
+<p>The Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of <em>analysis in place</em>. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2.</strong> If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.</p>
+<p>As an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using <code>xarray</code>. Land Ice Heights are then plotted using <code>hvplot</code>.</p>
+<p><code>earthaccess</code> is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both <em>DAAC-hosted</em> and <em>cloud-hosted</em> data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess</p>
 </section>
 <section id="import-packages" class="level2">
 <h2 class="anchored" data-anchor-id="import-packages">Import Packages</h2>
