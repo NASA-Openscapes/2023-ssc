@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/index.html</loc>
-    <lastmod>2023-11-13T23:51:00.503Z</lastmod>
+    <lastmod>2023-11-14T00:30:13.278Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/authentication/NASA_Earthdata_Authentication.html</loc>
-    <lastmod>2023-11-13T23:50:59.859Z</lastmod>
+    <lastmod>2023-11-14T00:30:12.566Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-access/Intro_xarray_hvplot.html</loc>
-    <lastmod>2023-11-13T23:50:58.631Z</lastmod>
+    <lastmod>2023-11-14T00:30:11.226Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/icepyx.html</loc>
-    <lastmod>2023-11-13T23:50:57.639Z</lastmod>
+    <lastmod>2023-11-14T00:30:10.262Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthdata-search.html</loc>
-    <lastmod>2023-11-13T23:50:57.043Z</lastmod>
+    <lastmod>2023-11-14T00:30:09.702Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/index.html</loc>
-    <lastmod>2023-11-13T23:50:56.075Z</lastmod>
+    <lastmod>2023-11-14T00:30:08.646Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/schedule.html</loc>
-    <lastmod>2023-11-13T23:50:55.311Z</lastmod>
+    <lastmod>2023-11-14T00:30:07.810Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/cloud-paradigm.html</loc>
-    <lastmod>2023-11-13T23:50:54.663Z</lastmod>
+    <lastmod>2023-11-14T00:30:07.134Z</lastmod>
   </url>
   <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/further-resources.html</loc>
-    <lastmod>2023-11-13T23:50:53.887Z</lastmod>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/jupyterhub_demo/jupyterhub_demo.html</loc>
+    <lastmod>2023-11-14T00:30:06.338Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html</loc>
-    <lastmod>2023-11-13T23:50:52.955Z</lastmod>
+    <lastmod>2023-11-14T00:30:05.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/further-resources.html</loc>
+    <lastmod>2023-11-14T00:30:05.978Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/science/Intro_xarray_hvplot.html</loc>
-    <lastmod>2023-11-13T23:50:54.375Z</lastmod>
+    <lastmod>2023-11-14T00:30:06.818Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/index.html</loc>
-    <lastmod>2023-11-13T23:50:54.939Z</lastmod>
+    <lastmod>2023-11-14T00:30:07.426Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/setup.html</loc>
-    <lastmod>2023-11-13T23:50:55.771Z</lastmod>
+    <lastmod>2023-11-14T00:30:08.294Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/index.html</loc>
-    <lastmod>2023-11-13T23:50:56.647Z</lastmod>
+    <lastmod>2023-11-14T00:30:09.290Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthaccess.html</loc>
-    <lastmod>2023-11-13T23:50:57.347Z</lastmod>
+    <lastmod>2023-11-14T00:30:09.978Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.html</loc>
-    <lastmod>2023-11-13T23:50:58.155Z</lastmod>
+    <lastmod>2023-11-14T00:30:10.754Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-discovery/Data_Discovery_CMR_API.html</loc>
-    <lastmod>2023-11-13T23:50:59.287Z</lastmod>
+    <lastmod>2023-11-14T00:30:11.878Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/authentication/NASA_Earthdata_Login_Token.html</loc>
-    <lastmod>2023-11-13T23:51:00.195Z</lastmod>
+    <lastmod>2023-11-14T00:30:12.966Z</lastmod>
   </url>
 </urlset>
