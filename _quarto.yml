@@ -41,7 +41,7 @@ website:
               text: "Earthdata Search"
             - href: tutorials/data-access/index.ipynb
               text: "Programmatic Access"
-            - href: tutorials/data-access/icepyx.md
+            - href: tutorials/data-access/icepyx.ipynb
               text: "Icepyx"
         - section: "GEDI / IS2 Science Tutorial"
           contents: 
