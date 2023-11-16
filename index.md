@@ -14,7 +14,7 @@ Welcome to the **2023 GEDI / ICESAT-2 Application Workshop** hosted by the [Spac
 
 - [Deploy Jupyter Lab instance in 2i2c](https://openscapes.2i2c.cloud/hub)   
 - [Workshop Schedule](tutorials/schedule.md)
-- [Access notebooks without cloning](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2023-ssc&urlpath=lab%2Ftree%2F2023-scc%2Ftutorials%2Fjupyterhub_demo%2Fjupyterhub_demo.ipynb&branch=main)
+- [Access notebooks without cloning](https://openscapes.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FNASA-Openscapes%2F2023-ssc&urlpath=lab%2Ftree%2F2023-ssc%2Ftutorials%2Fjupyterhub_demo%2Fjupyterhub_demo.ipynb&branch=main)
 
 
 ## About
