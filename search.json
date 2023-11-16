@@ -112,6 +112,174 @@
     "text": "These tutorials are a combination of narrative, links, code, and outputs. They have been developed for live demos during the Workshop, and are available for self-paced learning.\nHands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access.\nTutorials are markdown (.md) and Jupyter (.ipynb) notebooks, and are available on GitHub"
   },
   {
+    "objectID": "tutorials/schedule.html",
+    "href": "tutorials/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The SSC GEDI/ICESAT-2 Workshop will take place on November 15th.\nNote, hands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access."
+  },
+  {
+    "objectID": "tutorials/schedule.html#workshop-schedule",
+    "href": "tutorials/schedule.html#workshop-schedule",
+    "title": "Schedule",
+    "section": "Workshop Schedule",
+    "text": "Workshop Schedule\n\n\n\nHour\nEvent\nInstructor\n\n\n\n\n3:00 pm CST/MX\nWelcome and Overview of Tutorial\n\n\n\n3:10 pm\nCryoCloud - A Shared Cloud Platform for NASA\nTasha Snow (Colorado School of Mines)\n\n\n3:25 pm\nHub task - clone repo\n\n\n\n3:35 pm\nBreak (Q&A)\n\n\n\n3:40 pm\nICESat-2 Data Access, NASA DAAC @ NSIDC\nLuis Alberto Lopez Espinosa  (NSIDC, University of Colorado)\n\n\n4:00 pm\nBreak (Q&A)\n\n\n\n4:10 pm\nThe icepyx Software Library and Community\nRachel Wegener (University of Maryland)\n\n\n4:30 pm\nBreak\n\n\n\n4:40 pm\nAccess and Discovery of GEDI Data via the DAAC at the ORNL\nRupesh Shrestha (Oakridge National Laboratory, ORNL-DAAC)\n\n\n5:00 pm\nBreak (Q&A)\n\n\n\n5:10 pm\nGEDI Data User Resources at the LP DAAC\nMahsa Jami (NASA LP-DAAC)\n\n\n5:30 pm\nBreak (Q&A)\n\n\n\n5:40 pm\nEjemplos de aplicaciones de uso de éxito GEDI y posibilidades(Mapas, Reforestacion, Especie protegida)\nAdrian Pascual\n\n\n6:00 pm CST/MX\nEnd of Tutorial\n\n\n\n\n\nThank you!\nJupyterHub: close out.\n\nclose out your JupyterHub instance if you are finished for the day, following these instructions.\n\nYou will continue to have access to the 2i2c JupyterHub in AWS for a week following the SSC GEDI/ICESAT-2 Cloud Workshop. You may use that time to continue work and all learn more about migrating data accass routines and science workflows to the Cloud. This cloud compute environment is supported by the NASA Openscapes project."
+  },
+  {
+    "objectID": "tutorials/schedule.html#getting-help-during-the-workshop",
+    "href": "tutorials/schedule.html#getting-help-during-the-workshop",
+    "title": "Schedule",
+    "section": "Getting help during the Workshop",
+    "text": "Getting help during the Workshop\nPlease use the webex chat platform to ask any questions you have during the workshop."
+  },
+  {
+    "objectID": "tutorials/cloud/cloud-paradigm.html",
+    "href": "tutorials/cloud/cloud-paradigm.html",
+    "title": "NASA and the Cloud Paradigm",
+    "section": "",
+    "text": "Slides that introduce NASA Earthdata Cloud & the Cloud Paradigm."
+  },
+  {
+    "objectID": "tutorials/GEDI_data_SSC23.html#helpful-links",
+    "href": "tutorials/GEDI_data_SSC23.html#helpful-links",
+    "title": "How to work with GEDI Level 2B V002 Data",
+    "section": "Helpful Links",
+    "text": "Helpful Links\n\nLP DAAC Website\nLP DAAC GitHub\nGEDI Data Resources GitHub\nGEDI Data Product Pages\nUniversity of Maryland GEDI - Learn more about the GEDI Mission\n\nOpenAltimetry - Learn about GEDI coverage\n\nNASA Earthdata Search"
+  },
+  {
+    "objectID": "tutorials/GEDI_data_SSC23.html#contact-info",
+    "href": "tutorials/GEDI_data_SSC23.html#contact-info",
+    "title": "How to work with GEDI Level 2B V002 Data",
+    "section": "Contact Info:",
+    "text": "Contact Info:\nEmail: LPDAAC@usgs.gov\nVoice: +1-866-573-3222\nOrganization: Land Processes Distributed Active Archive Center (LP DAAC)¹\nWebsite: https://lpdaac.usgs.gov/\nDate last modified: 11-15-2023\n¹Work performed under USGS contract G15PD00467 for NASA contract NNG14HH33I."
+  },
+  {
+    "objectID": "tutorials/further-resources.html",
+    "href": "tutorials/further-resources.html",
+    "title": "Additional resources",
+    "section": "",
+    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
+  },
+  {
+    "objectID": "tutorials/further-resources.html#a-growing-list-of-resources",
+    "href": "tutorials/further-resources.html#a-growing-list-of-resources",
+    "title": "Additional resources",
+    "section": "",
+    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
+  },
+  {
+    "objectID": "tutorials/further-resources.html#additional-tutorials",
+    "href": "tutorials/further-resources.html#additional-tutorials",
+    "title": "Additional resources",
+    "section": "Additional tutorials",
+    "text": "Additional tutorials\n\nData_Access__Direct_S3_Access__PODAAC_ECCO_SSH using CMR-STAC API to retrieve S3 links\nDirect access to ECCO data in S3 (from us-west-2) - Direct S3 access example with netCDF data\nDirect_S3_Access__gdalvrt\nDirect_S3_Access__rioxarray_clipping\nCalculate black-sky, white-sky, and actual albedo (MCD43A) from MCD43A1 BRDF Parameters using R\nXarray Zonal Statistics"
+  },
+  {
+    "objectID": "tutorials/prerequisites.html",
+    "href": "tutorials/prerequisites.html",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
+  },
+  {
+    "objectID": "tutorials/prerequisites.html#prerequisites",
+    "href": "tutorials/prerequisites.html#prerequisites",
+    "title": "Prerequisites",
+    "section": "",
+    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
+  },
+  {
+    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html",
+    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html",
+    "title": "Demo JupyterHub",
+    "section": "",
+    "text": "Author: Tasha Snow\niumrmzcehgmb Learning Objectives - **Learn how to access and use the Openscapes JupyterHub**  - **Open the JupyterHub and clone the Openscapes Espacio and Sostenibilidad Colloquium repository**"
+  },
+  {
+    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#access-the-cryocloud-powerpoint-whenever-you-need-to-reference-it",
+    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#access-the-cryocloud-powerpoint-whenever-you-need-to-reference-it",
+    "title": "Demo JupyterHub",
+    "section": "Access the CryoCloud powerpoint whenever you need to reference it",
+    "text": "Access the CryoCloud powerpoint whenever you need to reference it\nOpen the powerpoint by directly clicking on the hyperlink above or to open it in the Openscapes Linux Desktop web browser as follows: - Copy this hyperlink: https://bit.ly/4785hMv - Click on the plus (+) sign in the File Browser to the left to open a Launcher window - Under Notebooks, click on Desktop to access the Linux Desktop. This will open a new tab. - Click on the Web Browser tool (globe) at the bottom of the screen - Paste the url into the search bar"
+  },
+  {
+    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#open-cryocloud",
+    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#open-cryocloud",
+    "title": "Demo JupyterHub",
+    "section": "Open CryoCloud",
+    "text": "Open CryoCloud\n\nScroll through the server sizes. Stick with the 3.7Gb server (the default).\n\n```iumrmzcehgmb Tip Be realistic about the max memory you will need. The amount you select, you are guaranteed, but if you use more you risk crashing your server for you and anyone else who is sharing with you. If you crash the server, it just requires logging out and reopening it, but it could be annoying for everyone.\nCheck your memory usage at the bottom in the middle of the screen.\n\n2) Choose the Python programming language.\n\n3) Sit back and learn about each of the tools!\n    - JupyterHub options and viewing setup\n    - Github\n    - Virtual Linux desktop\n    - SyncThing\n    - Viewing and editing of different files\n\nNow after the demo...\n\n## Task: Clone the Espacio and Sostenibilidad Colloquium jupyterbook\n\nWe will import the [NASA Openscapes Espacio and Sostenibilidad Colloquium Github repository](https://github.com/NASA-Openscapes/2023-ssc.git).\n\nTo do this: \n1. Select the plus (`+`) sign above the `File Browser` to the left, which will bring up a `Launcher` window. \n\n2. Click the `terminal` button under Other to open it. This is your command line like you would have on any computer. \n\nBefore cloning the repo, you have the option to switch to another file folder using the _change directory_ terminal command: `cd folder` if you do not want the Hackweek repo in your current directory (you can check which directory you are currently in using _print working directory_ command: `pwd`).\ncd yourfoldername\n\n3. Now clone the hackweek code into your current directory: \ngit clone https://github.com/NASA-Openscapes/2023-ssc.git\n\n4. You will see the folder pop into your `File Browser` on the left if you have the current directory open. Click on the folder to navigate through the files. \n\n5. To open this tutorial, click on the `book` subdirectory &gt; `tutorials` &gt; `jupyterhub_demo` &gt; and double click on `jupyterhub_demo`. This should open up this tutorial in case you want to review it in the future. \n\n## Shutting down your JupyterHub\n\n```{admonition} TIP\n**Best Practice: Shut down the Openscapes server when you are done to save us money.**\n\n**If you only close your tab or click log out, your server will continue running for 90 minutes.**\nWhenever you are done, it is best to shut down your server when you sign out to save money. Time on the JupyterHub costs money and there are systems in place to make sure your server doesn’t run indefinitely if you forget about it. After 90 minutes of no use, it will shut down. We prefer you shut down the server when so we save that 90 minutes of computing cost. To do so:\n\nIn upper left, click on File &gt; Hub Control Panel, which will open another tab\nClick the Stop Server button. Once this button disappears after you clicked it, your server is off.\nClick Log Out in the top right of your screen and you will be logged out, or you can start a new server\nYou can now close this tab and the other tab where you were just working"
+  },
+  {
+    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#summary",
+    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#summary",
+    "title": "Demo JupyterHub",
+    "section": "Summary",
+    "text": "Summary\n🎉 Congratulations! You’ve completed this tutorial and have seen how we can access and use the Openscapes JupyterHub."
+  },
+  {
+    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#references",
+    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#references",
+    "title": "Demo JupyterHub",
+    "section": "References",
+    "text": "References\nTo learn more about CryoCloud, gain code for NASA data access, and find other Cryosphere tutorials check out this other documentation:\n\nCryoCloud JupyterBook"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html",
+    "href": "tutorials/science/Intro_xarray_hvplot.html",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "",
+    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "",
+    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "What is xarray",
+    "text": "What is xarray\nxarray is an open-source project and python package to work with labelled multi-dimensional arrays. It is leverages numpy, pandas, matplotlib and dask to build Dataset and DataArray objects with built-in methods to subset, analyze, interpolate, and plot multi-dimensional data. It makes working with multi-dimensional data cubes efficient and fun. It will change your life for the better. You’ll be more attractive, more interesting, and better equiped to take on lifes challenges."
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "What you will learn from this tutorial",
+    "text": "What you will learn from this tutorial\nIn this tutorial you will learn how to:\n\nload a netcdf file into xarray\ninterrogate the Dataset and understand the difference between DataArray and Dataset\nsubset a Dataset\ncalculate annual and monthly mean fields\ncalculate a time series of zonal means\nplot these results\n\nAs always, we’ll start by importing xarray. We’ll follow convention by giving the module the shortname xr\n\nimport xarray as xr\nxr.set_options(keep_attrs=True)\nimport hvplot.xarray\n\nI’m going to use one of xarray’s tutorial datasets. In this case, air temperature from the NCEP reanalysis. I’ll assign the result of the open_dataset to ds. I may change this to access a dataset directly\n\nds = xr.tutorial.open_dataset(\"air_temperature\")\n\nAs we are in an interactive environment, we can just type ds to see what we have.\n\nds\n\nFirst thing to notice is that ds is an xarray.Dataset object. It has dimensions, lat, lon, and time. It also has coordinate variables with the same names as these dimensions. These coordinate variables are 1-dimensional. This is a NetCDF convention. The Dataset contains one data variable, air. This has dimensions (time, lat, lon).\nClicking on the document icon reveals attributes for each variable. Clicking on the disk icon reveals a representation of the data.\nEach of the data and coordinate variables can be accessed and examined using the variable name as a key.\n\nds.air\n\n\nds['air']\n\nThese are xarray.DataArray objects. This is the basic building block for xarray.\nVariables can also be accessed as attributes of ds.\n\nds.time\n\nA major difference between accessing a variable as an attribute versus using a key is that the attribute is read-only but the key method can be used to update the variable. For example, if I want to convert the units of air from Kelvin to degrees Celsius.\n\nds['air'] = ds.air - 273.15\n\nThis approach can also be used to add new variables\n\nds['air_kelvin'] = ds.air + 273.15\n\n\nds\n\nIt is helpful to update attributes such as units, this saves time, confusion and mistakes, especially when you save the dataset.\n\nds['air'].attrs['units'] = 'degC'\n\n\nds"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Subsetting and Indexing",
+    "text": "Subsetting and Indexing\nSubsetting and indexing methods depend on whether you are working with a Dataset or DataArray. A DataArray can be accessed using positional indexing just like a numpy array. To access the temperature field for the first time step, you do the following.\n\nds['air'][0,:,:]\n\nNote this returns a DataArray with coordinates but not attributes.\nHowever, the real power is being able to access variables using coordinate variables. I can get the same subset using the following. (It’s also more explicit about what is being selected and robust in case I modify the DataArray and expect the same output.)\n\nds['air'].sel(time='2013-01-01').time\n\n\nds.air.sel(time='2013-01-01')\n\nI can also do slices. I’ll extract temperatures for the state of Colorado. The bounding box for the state is [-109 E, -102 E, 37 N, 41 N].\nIn the code below, pay attention to both the order of the coordinates and the range of values. The first value of the lat coordinate variable is 41 N, the second value is 37 N. Unfortunately, xarray expects slices of coordinates to be in the same order as the coordinates. Note lon is 0 to 360 not -180 to 180, and I let python calculate it for me within the slice.\n\nds.air.sel(lat=slice(41.,37.), lon=slice(360-109,360-102))\n\nWhat if we want temperature for a point, for example Denver, CO (39.72510678889283 N, -104.98785545855408 E). xarray can handle this! If we just want data from the nearest grid point, we can use sel and specify the method as “nearest”.\n\ndenver_lat, denver_lon = 39.72510678889283, -104.98785545855408\n\n\nds.air.sel(lat=denver_lat, lon=360+denver_lon, method='nearest').hvplot()\n\nIf we want to interpolate, we can use interp(). In this case I use linear or bilinear interpolation.\ninterp() can also be used to resample data to a new grid and even reproject data\n\nds.air.interp(lat=denver_lat, lon=360+denver_lon, method='linear')\n\nsel() and interp() can also be used on Dataset objects.\n\nds.sel(lat=slice(41,37), lon=slice(360-109,360-102))\n\n\nds.interp(lat=denver_lat, lon=360+denver_lon, method='linear')"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#analysis",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#analysis",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Analysis",
+    "text": "Analysis\nAs a simple example, let’s try to calculate a mean field for the whole time range.\n\nds.mean(dim='time').hvplot()\n\nWe can also calculate a zonal mean (averaging over longitude)\n\nds.mean(dim='lon').hvplot()\n\nOther aggregation methods include min(), max(), std(), along with others.\n\nds.std(dim='time').hvplot()\n\nThe data we have are in 6h timesteps. This can be resampled to daily or monthly. If you are familiar with pandas, xarray uses the same methods.\n\nds_mon = ds.resample(time='M').mean()\nds_mon\n\nThis is a really short time series but as an example, let’s calculate a monthly climatology (at least for 2 months). For this we can use groupby()\n\nds_clim = ds_mon.groupby(ds_mon.time.dt.month).mean()\nds_clim"
+  },
+  {
+    "objectID": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
+    "href": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
+    "title": "Introduction to xarray… and hvplot",
+    "section": "Plot results",
+    "text": "Plot results\nFinally, let’s plot the results! This will plot the lat/lon axes of the original ds DataArray.\n\nds_clim.air.sel(month=10).hvplot()"
+  },
+  {
+    "objectID": "tutorials/cloud/index.html",
+    "href": "tutorials/cloud/index.html",
+    "title": "CryoCloud / Openscapes",
+    "section": "",
+    "text": "CryoCloud / Openscapes\nPlaceholder"
+  },
+  {
     "objectID": "tutorials/setup.html",
     "href": "tutorials/setup.html",
     "title": "Setup for tutorials",
@@ -173,244 +341,6 @@
     "title": "Setup for tutorials",
     "section": "How do I end my session?",
     "text": "How do I end my session?\n(Also see How do I end my Openscapes session? Will I lose all of my work?) When you are finished working for the day it is important to explicitly log out of your Openscapes session. The reason for this is it will save money and is a good habit to be in. When you keep a session active it uses up AWS resources and keeps a series of virtual machines deployed.\nStopping the server happens automatically when you log out, so navigate to “File -&gt; Log Out” and click “Log Out”!\n\n\n\nhub-control-panel-button (credit: UW Hackweek)\n\n\n!!! NOTE “logging out” - Logging out will NOT cause any of your work to be lost or deleted. It simply shuts down some resources. It would be equivalent to turning off your desktop computer at the end of the day."
-  },
-  {
-    "objectID": "tutorials/cloud/index.html",
-    "href": "tutorials/cloud/index.html",
-    "title": "CryoCloud / Openscapes",
-    "section": "",
-    "text": "CryoCloud / Openscapes\nPlaceholder"
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html",
-    "href": "tutorials/science/Intro_xarray_hvplot.html",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "",
-    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#why-do-we-need-xarray",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "",
-    "text": "As Geoscientists, we often work with time series of data with two or more dimensions: a time series of calibrated, orthorectified satellite images; two-dimensional grids of surface air temperature from an atmospheric reanalysis; or three-dimensional (level, x, y) cubes of ocean salinity from an ocean model. These data are often provided in GeoTIFF, NetCDF or HDF format with rich and useful metadata that we want to retain, or even use in our analysis. Common analyses include calculating means, standard deviations and anomalies over time or one or more spatial dimensions (e.g. zonal means). Model output often includes multiple variables that you want to apply similar analyses to.\n\n\n\nA schematic of multi-dimensional data\n\n\nThe schematic above shows a typical data structure for multi-dimensional data. There are two data cubes, one for temperature and one for precipitation. Common coordinate variables, in this case latitude, longitude and time are associated with each variable. Each variable, including coordinate variables, will have a set of attributes: name, units, missing value, etc. The file containing the data may also have attributes: source of the data, model name coordinate reference system if the data are projected. Writing code using low-level packages such as netcdf4 and numpy to read the data, then perform analysis, and write the results to file is time consuming and prone to errors."
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#what-is-xarray",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "What is xarray",
-    "text": "What is xarray\nxarray is an open-source project and python package to work with labelled multi-dimensional arrays. It is leverages numpy, pandas, matplotlib and dask to build Dataset and DataArray objects with built-in methods to subset, analyze, interpolate, and plot multi-dimensional data. It makes working with multi-dimensional data cubes efficient and fun. It will change your life for the better. You’ll be more attractive, more interesting, and better equiped to take on lifes challenges."
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#what-you-will-learn-from-this-tutorial",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "What you will learn from this tutorial",
-    "text": "What you will learn from this tutorial\nIn this tutorial you will learn how to:\n\nload a netcdf file into xarray\ninterrogate the Dataset and understand the difference between DataArray and Dataset\nsubset a Dataset\ncalculate annual and monthly mean fields\ncalculate a time series of zonal means\nplot these results\n\nAs always, we’ll start by importing xarray. We’ll follow convention by giving the module the shortname xr\n\nimport xarray as xr\nxr.set_options(keep_attrs=True)\nimport hvplot.xarray\n\nI’m going to use one of xarray’s tutorial datasets. In this case, air temperature from the NCEP reanalysis. I’ll assign the result of the open_dataset to ds. I may change this to access a dataset directly\n\nds = xr.tutorial.open_dataset(\"air_temperature\")\n\nAs we are in an interactive environment, we can just type ds to see what we have.\n\nds\n\nFirst thing to notice is that ds is an xarray.Dataset object. It has dimensions, lat, lon, and time. It also has coordinate variables with the same names as these dimensions. These coordinate variables are 1-dimensional. This is a NetCDF convention. The Dataset contains one data variable, air. This has dimensions (time, lat, lon).\nClicking on the document icon reveals attributes for each variable. Clicking on the disk icon reveals a representation of the data.\nEach of the data and coordinate variables can be accessed and examined using the variable name as a key.\n\nds.air\n\n\nds['air']\n\nThese are xarray.DataArray objects. This is the basic building block for xarray.\nVariables can also be accessed as attributes of ds.\n\nds.time\n\nA major difference between accessing a variable as an attribute versus using a key is that the attribute is read-only but the key method can be used to update the variable. For example, if I want to convert the units of air from Kelvin to degrees Celsius.\n\nds['air'] = ds.air - 273.15\n\nThis approach can also be used to add new variables\n\nds['air_kelvin'] = ds.air + 273.15\n\n\nds\n\nIt is helpful to update attributes such as units, this saves time, confusion and mistakes, especially when you save the dataset.\n\nds['air'].attrs['units'] = 'degC'\n\n\nds"
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#subsetting-and-indexing",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Subsetting and Indexing",
-    "text": "Subsetting and Indexing\nSubsetting and indexing methods depend on whether you are working with a Dataset or DataArray. A DataArray can be accessed using positional indexing just like a numpy array. To access the temperature field for the first time step, you do the following.\n\nds['air'][0,:,:]\n\nNote this returns a DataArray with coordinates but not attributes.\nHowever, the real power is being able to access variables using coordinate variables. I can get the same subset using the following. (It’s also more explicit about what is being selected and robust in case I modify the DataArray and expect the same output.)\n\nds['air'].sel(time='2013-01-01').time\n\n\nds.air.sel(time='2013-01-01')\n\nI can also do slices. I’ll extract temperatures for the state of Colorado. The bounding box for the state is [-109 E, -102 E, 37 N, 41 N].\nIn the code below, pay attention to both the order of the coordinates and the range of values. The first value of the lat coordinate variable is 41 N, the second value is 37 N. Unfortunately, xarray expects slices of coordinates to be in the same order as the coordinates. Note lon is 0 to 360 not -180 to 180, and I let python calculate it for me within the slice.\n\nds.air.sel(lat=slice(41.,37.), lon=slice(360-109,360-102))\n\nWhat if we want temperature for a point, for example Denver, CO (39.72510678889283 N, -104.98785545855408 E). xarray can handle this! If we just want data from the nearest grid point, we can use sel and specify the method as “nearest”.\n\ndenver_lat, denver_lon = 39.72510678889283, -104.98785545855408\n\n\nds.air.sel(lat=denver_lat, lon=360+denver_lon, method='nearest').hvplot()\n\nIf we want to interpolate, we can use interp(). In this case I use linear or bilinear interpolation.\ninterp() can also be used to resample data to a new grid and even reproject data\n\nds.air.interp(lat=denver_lat, lon=360+denver_lon, method='linear')\n\nsel() and interp() can also be used on Dataset objects.\n\nds.sel(lat=slice(41,37), lon=slice(360-109,360-102))\n\n\nds.interp(lat=denver_lat, lon=360+denver_lon, method='linear')"
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#analysis",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#analysis",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Analysis",
-    "text": "Analysis\nAs a simple example, let’s try to calculate a mean field for the whole time range.\n\nds.mean(dim='time').hvplot()\n\nWe can also calculate a zonal mean (averaging over longitude)\n\nds.mean(dim='lon').hvplot()\n\nOther aggregation methods include min(), max(), std(), along with others.\n\nds.std(dim='time').hvplot()\n\nThe data we have are in 6h timesteps. This can be resampled to daily or monthly. If you are familiar with pandas, xarray uses the same methods.\n\nds_mon = ds.resample(time='M').mean()\nds_mon\n\nThis is a really short time series but as an example, let’s calculate a monthly climatology (at least for 2 months). For this we can use groupby()\n\nds_clim = ds_mon.groupby(ds_mon.time.dt.month).mean()\nds_clim"
-  },
-  {
-    "objectID": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
-    "href": "tutorials/science/Intro_xarray_hvplot.html#plot-results",
-    "title": "Introduction to xarray… and hvplot",
-    "section": "Plot results",
-    "text": "Plot results\nFinally, let’s plot the results! This will plot the lat/lon axes of the original ds DataArray.\n\nds_clim.air.sel(month=10).hvplot()"
-  },
-  {
-    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html",
-    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html",
-    "title": "Demo JupyterHub",
-    "section": "",
-    "text": "Author: Tasha Snow\nfidtlihvarkv Learning Objectives - **Learn how to access and use the Openscapes JupyterHub**  - **Open the JupyterHub and clone the Openscapes Espacio and Sostenibilidad Colloquium repository**"
-  },
-  {
-    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#access-the-cryocloud-powerpoint-whenever-you-need-to-reference-it",
-    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#access-the-cryocloud-powerpoint-whenever-you-need-to-reference-it",
-    "title": "Demo JupyterHub",
-    "section": "Access the CryoCloud powerpoint whenever you need to reference it",
-    "text": "Access the CryoCloud powerpoint whenever you need to reference it\nOpen the powerpoint by directly clicking on the hyperlink above or to open it in the Openscapes Linux Desktop web browser as follows: - Copy this hyperlink: https://bit.ly/4785hMv - Click on the plus (+) sign in the File Browser to the left to open a Launcher window - Under Notebooks, click on Desktop to access the Linux Desktop. This will open a new tab. - Click on the Web Browser tool (globe) at the bottom of the screen - Paste the url into the search bar"
-  },
-  {
-    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#open-cryocloud",
-    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#open-cryocloud",
-    "title": "Demo JupyterHub",
-    "section": "Open CryoCloud",
-    "text": "Open CryoCloud\n\nScroll through the server sizes. Stick with the 3.7Gb server (the default).\n\n```fidtlihvarkv Tip Be realistic about the max memory you will need. The amount you select, you are guaranteed, but if you use more you risk crashing your server for you and anyone else who is sharing with you. If you crash the server, it just requires logging out and reopening it, but it could be annoying for everyone.\nCheck your memory usage at the bottom in the middle of the screen.\n\n2) Choose the Python programming language.\n\n3) Sit back and learn about each of the tools!\n    - JupyterHub options and viewing setup\n    - Github\n    - Virtual Linux desktop\n    - SyncThing\n    - Viewing and editing of different files\n\nNow after the demo...\n\n## Task: Clone the Espacio and Sostenibilidad Colloquium jupyterbook\n\nWe will import the [NASA Openscapes Espacio and Sostenibilidad Colloquium Github repository](https://github.com/NASA-Openscapes/2023-ssc.git).\n\nTo do this: \n1. Select the plus (`+`) sign above the `File Browser` to the left, which will bring up a `Launcher` window. \n\n2. Click the `terminal` button under Other to open it. This is your command line like you would have on any computer. \n\nBefore cloning the repo, you have the option to switch to another file folder using the _change directory_ terminal command: `cd folder` if you do not want the Hackweek repo in your current directory (you can check which directory you are currently in using _print working directory_ command: `pwd`).\ncd yourfoldername\n\n3. Now clone the hackweek code into your current directory: \ngit clone https://github.com/NASA-Openscapes/2023-ssc.git\n\n4. You will see the folder pop into your `File Browser` on the left if you have the current directory open. Click on the folder to navigate through the files. \n\n5. To open this tutorial, click on the `book` subdirectory &gt; `tutorials` &gt; `jupyterhub_demo` &gt; and double click on `jupyterhub_demo`. This should open up this tutorial in case you want to review it in the future. \n\n## Shutting down your JupyterHub\n\n```{admonition} TIP\n**Best Practice: Shut down the Openscapes server when you are done to save us money.**\n\n**If you only close your tab or click log out, your server will continue running for 90 minutes.**\nWhenever you are done, it is best to shut down your server when you sign out to save money. Time on the JupyterHub costs money and there are systems in place to make sure your server doesn’t run indefinitely if you forget about it. After 90 minutes of no use, it will shut down. We prefer you shut down the server when so we save that 90 minutes of computing cost. To do so:\n\nIn upper left, click on File &gt; Hub Control Panel, which will open another tab\nClick the Stop Server button. Once this button disappears after you clicked it, your server is off.\nClick Log Out in the top right of your screen and you will be logged out, or you can start a new server\nYou can now close this tab and the other tab where you were just working"
-  },
-  {
-    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#summary",
-    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#summary",
-    "title": "Demo JupyterHub",
-    "section": "Summary",
-    "text": "Summary\n🎉 Congratulations! You’ve completed this tutorial and have seen how we can access and use the Openscapes JupyterHub."
-  },
-  {
-    "objectID": "tutorials/jupyterhub_demo/jupyterhub_demo.html#references",
-    "href": "tutorials/jupyterhub_demo/jupyterhub_demo.html#references",
-    "title": "Demo JupyterHub",
-    "section": "References",
-    "text": "References\nTo learn more about CryoCloud, gain code for NASA data access, and find other Cryosphere tutorials check out this other documentation:\n\nCryoCloud JupyterBook"
-  },
-  {
-    "objectID": "tutorials/prerequisites.html",
-    "href": "tutorials/prerequisites.html",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
-  },
-  {
-    "objectID": "tutorials/prerequisites.html#prerequisites",
-    "href": "tutorials/prerequisites.html#prerequisites",
-    "title": "Prerequisites",
-    "section": "",
-    "text": "To follow along hands-on during the Workshop, please do the following (20 minutes). All software or accounts are free.\n\nGitHub username\n\nCreate a GitHub account (if you don’t already have one) at https://github.com. Follow optional advice on choosing your username\nYour GitHub username is used to enable you access to a cloud environment during the workshop.\n\nEarthdata Login account\n\nCreate an Earthdata Login account (if you don’t already have one) at https://urs.earthdata.nasa.gov\nRemember your username and password; you will need to download or access cloud data during the workshop and beyond.\n\nNetrc file\n\nCreate a netrc file using your Earthdata login credentials using the instruction.\nThis file is needed to access NASA Earthdata assets from a scripting environment like Python.\n\nLaptop or tablet\n\nParticipation in the exercises requires a laptop or tablet. Yes, a tablet works too! All participants will have access to a 2i2c Jupyter Lab instance running in AWS us-west 2.\n\nSlack\n\nThe event Slack channel"
-  },
-  {
-    "objectID": "tutorials/further-resources.html",
-    "href": "tutorials/further-resources.html",
-    "title": "Additional resources",
-    "section": "",
-    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
-  },
-  {
-    "objectID": "tutorials/further-resources.html#a-growing-list-of-resources",
-    "href": "tutorials/further-resources.html#a-growing-list-of-resources",
-    "title": "Additional resources",
-    "section": "",
-    "text": "One stop for PO.DAAC Cloud Information: Cloud Data page with About, Cloud Datasets, Access Data, FAQs, Resources, and Migration information\nAsk questions or find resources: PO.DAAC in the CLOUD Forum\nCloud user migration overview, guidance, and resources: PO.DAAC Webinar\nSearch and get access links: Earthdata Search Client and guide\nSearch and get access links: PO.DAAC Cloud Earthdata Search Portal\nBrowse cloud data in web-based browser: CMR Virtual Browse and guiding video\nScripted data search end-point: Earthdata Common Metadata Repository (CMR) API\nEnable data download or access: Obtain Earthdata Login Account\nDownload data regularly: PO.DAAC Data Subscriber Access video and PO.DAAC Data Subscriber instructions\nBulk Download guide\nOPeNDAP in the cloud\nPO.DAAC scripts and notebooks: PO.DAAC Github\nHow to get started in the AWS cloud: Earthdata Cloud Primer documents\n2021 NASA Cloud Hackathon - November 2021, co-hosted by PODAAC, NSIDC DAAC, and LPDAAC. Additional support is provided by ASDC, GESDISC, IMPACT, and Openscapes.\nNASA Earthdata: How to Cloud\nSetting up Jupyter Notebooks in a user EC2 instance in AWS - helpful blog post for setting up jupyter notebooks in an EC2 instance in AWS. (Builds on the Cloud Primer tutorials, which are missing that next step)"
-  },
-  {
-    "objectID": "tutorials/further-resources.html#additional-tutorials",
-    "href": "tutorials/further-resources.html#additional-tutorials",
-    "title": "Additional resources",
-    "section": "Additional tutorials",
-    "text": "Additional tutorials\n\nData_Access__Direct_S3_Access__PODAAC_ECCO_SSH using CMR-STAC API to retrieve S3 links\nDirect access to ECCO data in S3 (from us-west-2) - Direct S3 access example with netCDF data\nDirect_S3_Access__gdalvrt\nDirect_S3_Access__rioxarray_clipping\nCalculate black-sky, white-sky, and actual albedo (MCD43A) from MCD43A1 BRDF Parameters using R\nXarray Zonal Statistics"
-  },
-  {
-    "objectID": "tutorials/GEDI_data_SSC23.html#helpful-links",
-    "href": "tutorials/GEDI_data_SSC23.html#helpful-links",
-    "title": "How to work with GEDI Level 2B V002 Data",
-    "section": "Helpful Links",
-    "text": "Helpful Links\n\nLP DAAC Website\nLP DAAC GitHub\nGEDI Data Resources GitHub\nGEDI Data Product Pages\nUniversity of Maryland GEDI - Learn more about the GEDI Mission\n\nOpenAltimetry - Learn about GEDI coverage\n\nNASA Earthdata Search"
-  },
-  {
-    "objectID": "tutorials/GEDI_data_SSC23.html#contact-info",
-    "href": "tutorials/GEDI_data_SSC23.html#contact-info",
-    "title": "How to work with GEDI Level 2B V002 Data",
-    "section": "Contact Info:",
-    "text": "Contact Info:\nEmail: LPDAAC@usgs.gov\nVoice: +1-866-573-3222\nOrganization: Land Processes Distributed Active Archive Center (LP DAAC)¹\nWebsite: https://lpdaac.usgs.gov/\nDate last modified: 11-15-2023\n¹Work performed under USGS contract G15PD00467 for NASA contract NNG14HH33I."
-  },
-  {
-    "objectID": "tutorials/cloud/cloud-paradigm.html",
-    "href": "tutorials/cloud/cloud-paradigm.html",
-    "title": "NASA and the Cloud Paradigm",
-    "section": "",
-    "text": "Slides that introduce NASA Earthdata Cloud & the Cloud Paradigm."
-  },
-  {
-    "objectID": "tutorials/schedule.html",
-    "href": "tutorials/schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "The SSC GEDI/ICESAT-2 Workshop will take place on November 15th.\nNote, hands-on exercises will be executed from a Jupyter Lab instance in 2i2c. Please pass along your Github Username to get access."
-  },
-  {
-    "objectID": "tutorials/schedule.html#workshop-schedule",
-    "href": "tutorials/schedule.html#workshop-schedule",
-    "title": "Schedule",
-    "section": "Workshop Schedule",
-    "text": "Workshop Schedule\n\n\n\nHour\nEvent\nInstructor\n\n\n\n\n3:00 pm CST/MX\nWelcome and Overview of Tutorial\n\n\n\n3:10 pm\nCryoCloud - A Shared Cloud Platform for NASA\nTasha Snow (Colorado School of Mines)\n\n\n3:25 pm\nHub task - clone repo\n\n\n\n3:35 pm\nBreak (Q&A)\n\n\n\n3:40 pm\nICESat-2 Data Access, NASA DAAC @ NSIDC\nLuis Alberto Lopez Espinosa  (NSIDC, University of Colorado)\n\n\n4:00 pm\nBreak (Q&A)\n\n\n\n4:10 pm\nThe icepyx Software Library and Community\nRachel Wegener (University of Maryland)\n\n\n4:30 pm\nBreak\n\n\n\n4:40 pm\nAccess and Discovery of GEDI Data via the DAAC at the ORNL\nRupesh Shrestha (Oakridge National Laboratory, ORNL-DAAC)\n\n\n5:00 pm\nBreak (Q&A)\n\n\n\n5:10 pm\nGEDI Data User Resources at the LP DAAC\nMahsa Jami (NASA LP-DAAC)\n\n\n5:30 pm\nBreak (Q&A)\n\n\n\n5:40 pm\nEjemplos de aplicaciones de uso de éxito GEDI y posibilidades(Mapas, Reforestacion, Especie protegida)\nAdrian Pascual\n\n\n6:00 pm CST/MX\nEnd of Tutorial\n\n\n\n\n\nThank you!\nJupyterHub: close out.\n\nclose out your JupyterHub instance if you are finished for the day, following these instructions.\n\nYou will continue to have access to the 2i2c JupyterHub in AWS for a week following the SSC GEDI/ICESAT-2 Cloud Workshop. You may use that time to continue work and all learn more about migrating data accass routines and science workflows to the Cloud. This cloud compute environment is supported by the NASA Openscapes project."
-  },
-  {
-    "objectID": "tutorials/schedule.html#getting-help-during-the-workshop",
-    "href": "tutorials/schedule.html#getting-help-during-the-workshop",
-    "title": "Schedule",
-    "section": "Getting help during the Workshop",
-    "text": "Getting help during the Workshop\nPlease use the webex chat platform to ask any questions you have during the workshop."
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "",
-    "text": "The Global Ecosystem Dynamics Investigation (GEDI) mission aims to characterize ecosystem structure and dynamics to enable radically improved quantification and understanding of the Earth’s carbon cycle and biodiversity. The GEDI instrument produces high resolution laser ranging observations of the 3-dimensional structure of the Earth. GEDI is attached to the International Space Station and collects data globally between 51.6 N and 51.6 S latitudes at the highest resolution and densest sampling of any light detection and ranging (lidar) instrument in orbit to date. The Land Processes Distributed Active Archive Center (LP DAAC) distributes the GEDI Level 1 and Level 2 Version 1 and Version 2 products. The L1B and L2 GEDI products are archived and distributed in the HDF-EOS5 file format."
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#use-case-example",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#use-case-example",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "Use Case Example:",
-    "text": "Use Case Example:\nThis tutorial was developed using an example use case for a project being completed by the National Park Service. The goal of the project is to use GEDI L2B Version 2 data to observe tree canopy height, cover, and profile over Redwood National Park in northern California.\nThis tutorial will show how to use Python to open GEDI L2B Version 2 files, visualize the sub-orbit of GEDI points (shots), subset to a region of interest, visualize GEDI canopy height and vertical profile metrics, and export subsets of GEDI science dataset (SDS) layers as GeoJSON files that can be loaded into GIS and/or Remote Sensing software programs.\n\nRedwood National Park GeoJSON\n\nContains the administrative boundary for Redwood National Park, available from: Administrative Boundaries of National Park System Units 12/31/2017 - National Geospatial Data Asset (NGDA) NPS National Parks Dataset\n\n\n\nData Used in the Example:\n\nGEDI L2B Canopy Cover and Vertical Profile Metrics Data Global Footprint Level - GEDI02_B.002\n\nThe purpose of the L2B dataset is to extract biophysical metrics from each GEDI waveform. These metrics are based on the directional gap probability profile derived from the L1B waveform and include canopy cover, Plant Area Index (PAI), Plant Area Volume Density (PAVD) and Foliage Height Diversity (FHD).\n\nScience Dataset (SDS) layers:\n\n/geolocation/digital_elevation_model\n/geolocation/elev_lowestmode\n\n/geolocation/elev_highestreturn\n\n/geolocation/lat_lowestmode\n\n/geolocation/lon_lowestmode\n\n/rh100\n\n/l2b_quality_flag\n\n/degrade_flag\n\n/sensitivity\n\n/pai\n\n/pavd_z\n\n/geolocation/shot_number\n\n/dz\n\n/selected_l2a_algorithm"
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#source-code-used-to-generate-this-tutorial",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#source-code-used-to-generate-this-tutorial",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "Source Code used to Generate this Tutorial:",
-    "text": "Source Code used to Generate this Tutorial:\nThe repository containing all of the required files is located at: https://github.com/nasa/GEDI-Data-Resources\n\nNOTE: This tutorial was developed for GEDI L2B Version 2 HDF-EOS5 files and should only be used for that product."
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#import-packages",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#import-packages",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "1.1 Import Packages ",
-    "text": "1.1 Import Packages \n\nImport the required packages and set the input/working directory to run this Jupyter Notebook locally.\n\nimport os\nimport h5py\nimport numpy as np\nimport pandas as pd\nimport geopandas as gp\nfrom shapely.geometry import Point\nimport geoviews as gv\nfrom geoviews import opts, tile_sources as gvts\nimport holoviews as hv\ngv.extension('bokeh', 'matplotlib')\nimport shapely\nimport earthaccess\nimport warnings\nfrom shapely.errors import ShapelyDeprecationWarning\nwarnings.filterwarnings(\"ignore\", category=ShapelyDeprecationWarning)"
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#set-up-the-working-environment-and-retrieve-files",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#set-up-the-working-environment-and-retrieve-files",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "1.2 Set Up the Working Environment and Retrieve Files",
-    "text": "1.2 Set Up the Working Environment and Retrieve Files\n\nThe input directory is defined as the current working directory.\n\ninDir = os.getcwd()   # Set input directory to the current working directory\nos.chdir(inDir)\ndata_dir = inDir.rsplit('2023-ssc')[0] + 'shared/2023SSC/'\ndata_dir\n\n'/home/jovyan/shared/2023SSC/'"
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#authentication",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#authentication",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "1.3 Authentication",
-    "text": "1.3 Authentication\nLogin to your NASA Earthdata account and create a .netrc file using the login function from the earthaccess library. If you do not have an Earthdata Account, you can create one here.\n\n# authenticate\nearthaccess.login()\n\nEARTHDATA_USERNAME and EARTHDATA_PASSWORD are not set in the current environment, try setting them or use a different strategy (netrc, interactive)\nYou're now authenticated with NASA Earthdata Login\nUsing token with expiration date: 12/24/2023\nUsing .netrc file for EDL\n\n\n&lt;earthaccess.auth.Auth at 0x7fa6508d1a20&gt;"
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#open-a-gedi-hdf5-file-and-read-file-metadata",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#open-a-gedi-hdf5-file-and-read-file-metadata",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "3.1 Open a GEDI HDF5 File and Read File Metadata ",
-    "text": "3.1 Open a GEDI HDF5 File and Read File Metadata \n\nRead the file using h5py.\n\nL2B = f'{data_dir}{gediFiles[0]}'\nL2B\n\n'/home/jovyan/shared/2023SSC/GEDI02_B_2022155015315_O19683_03_T05652_02_003_01_V002.h5'\n\n\n\n\nThe standard format for GEDI Version 2 filenames is as follows:\n\nGEDI02_B: Product Short Name\n2022159001702: Julian Date and Time of Acquisition (YYYYDDDHHMMSS)\nO19744: Orbit Number\n03: Sub-Orbit Granule Number (1-4)\nT08957: Track Number (Reference Ground Track)\n02: Positioning and Pointing Determination System (PPDS) type (00 is predict, 01 rapid, 02 and higher is final)\n003: PGE Version Number\n01: Granule Production Version\nV002: Product Version\n\n\n\nRead in a GEDI HDF5 file using the h5py package.\n\ngediL2B = h5py.File(L2B, 'r')  # Read file using h5py\n\n\n\nNavigate the HDF5 file below.\n\nlist(gediL2B.keys())\n\n['BEAM0000',\n 'BEAM0001',\n 'BEAM0010',\n 'BEAM0011',\n 'BEAM0101',\n 'BEAM0110',\n 'BEAM1000',\n 'BEAM1011',\n 'METADATA']\n\n\n\n\nThe GEDI HDF5 file contains groups in which data and metadata are stored.\n\n\nFirst, the METADATA group contains the file-level metadata.\n\nlist(gediL2B['METADATA'])\n\n['DatasetIdentification']\n\n\nThis contains useful information such as the creation date, PGEVersion, and VersionID. Below, print the file-level metadata attributes.\n\nfor g in gediL2B['METADATA']['DatasetIdentification'].attrs:\n    print(g, \": \", gediL2B['METADATA']['DatasetIdentification'].attrs[g]) \n\nPGEVersion :  003\nVersionID :  01\nabstract :  The GEDI L2B standard data product contains precise latitude, longitude, elevation, height, cover and vertical profile metrics for each laser footprint located on the land surface.\ncharacterSet :  utf8\ncreationDate :  2022-09-22T17:38:15.690108Z\ncredit :  The software that generates the L2B product was implemented within the GEDI Science Data Processing System at the NASA Goddard Space Flight Center (GSFC) in Greenbelt, Maryland in collaboration with the Department of Geographical Sciences at the University of Maryland (UMD).\nfileName :  GEDI02_B_2022155015315_O19683_03_T05652_02_003_01_V002.h5\nlanguage :  eng\noriginatorOrganizationName :  UMD/GSFC GEDI-SDPS &gt; GEDI Science Data Processing System\npurpose :  The purpose of the L2B dataset is to extract biophysical metrics from each GEDI waveform. These metrics are based on the directional gap probability profile derived from the L1B waveform and include canopy cover, Plant Area Index (PAI), Plant Area Volume Density (PAVD) and Foliage Height Diversity (FHD).\nshortName :  GEDI_L2B\nspatialRepresentationType :  along-track\nstatus :  onGoing\ntopicCategory :  geoscientificInformation\nuuid :  f7ecc77a-3372-4f53-9131-f110b4bbfb5c"
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#read-sds-metadata-and-subset-by-beam",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#read-sds-metadata-and-subset-by-beam",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "3.2 Read SDS Metadata and Subset by Beam ",
-    "text": "3.2 Read SDS Metadata and Subset by Beam \n\nThe GEDI instrument consists of 3 lasers producing a total of 8 beam ground transects. The eight remaining groups contain data for each of the eight GEDI beam transects. For additional information, be sure to check out: https://gedi.umd.edu/instrument/specifications/.\n\nbeamNames = [g for g in gediL2B.keys() if g.startswith('BEAM')]\nbeamNames\n\n['BEAM0000',\n 'BEAM0001',\n 'BEAM0010',\n 'BEAM0011',\n 'BEAM0101',\n 'BEAM0110',\n 'BEAM1000',\n 'BEAM1011']\n\n\n\n\nOne useful piece of metadata to retrieve from each beam transect is whether it is a full power beam or a coverage beam.\n\nfor b in beamNames: \n    print(f\"{b} is a {gediL2B[b].attrs['description']}\")\n\nBEAM0000 is a Coverage beam\nBEAM0001 is a Coverage beam\nBEAM0010 is a Coverage beam\nBEAM0011 is a Coverage beam\nBEAM0101 is a Full power beam\nBEAM0110 is a Full power beam\nBEAM1000 is a Full power beam\nBEAM1011 is a Full power beam\n\n\n\n\nBelow, pick one of the full power beams that will be used to retrieve GEDI L2B shots in next section.\n\n\nIdentify all the objects in the GEDI HDF5 file below.\nNote: This step may take a while to complete.\n\ngediL2B_objs = []\ngediL2B.visit(gediL2B_objs.append)                                           # Retrieve list of datasets\ngediSDS = [o for o in gediL2B_objs if isinstance(gediL2B[o], h5py.Dataset)]  # Search for relevant SDS inside data file\n# gediSDS\n[i for i in gediSDS if beamNames[4] in i]                               # Print the datasets for a selected beam \n\n['BEAM0101/algorithmrun_flag',\n 'BEAM0101/ancillary/dz',\n 'BEAM0101/ancillary/l2a_alg_count',\n 'BEAM0101/ancillary/maxheight_cuttoff',\n 'BEAM0101/ancillary/rg_eg_constraint_center_buffer',\n 'BEAM0101/ancillary/rg_eg_mpfit_max_func_evals',\n 'BEAM0101/ancillary/rg_eg_mpfit_maxiters',\n 'BEAM0101/ancillary/rg_eg_mpfit_tolerance',\n 'BEAM0101/ancillary/signal_search_buff',\n 'BEAM0101/ancillary/tx_noise_stddev_multiplier',\n 'BEAM0101/beam',\n 'BEAM0101/channel',\n 'BEAM0101/cover',\n 'BEAM0101/cover_z',\n 'BEAM0101/fhd_normal',\n 'BEAM0101/geolocation/degrade_flag',\n 'BEAM0101/geolocation/delta_time',\n 'BEAM0101/geolocation/digital_elevation_model',\n 'BEAM0101/geolocation/elev_highestreturn',\n 'BEAM0101/geolocation/elev_lowestmode',\n 'BEAM0101/geolocation/elevation_bin0',\n 'BEAM0101/geolocation/elevation_bin0_error',\n 'BEAM0101/geolocation/elevation_lastbin',\n 'BEAM0101/geolocation/elevation_lastbin_error',\n 'BEAM0101/geolocation/height_bin0',\n 'BEAM0101/geolocation/height_lastbin',\n 'BEAM0101/geolocation/lat_highestreturn',\n 'BEAM0101/geolocation/lat_lowestmode',\n 'BEAM0101/geolocation/latitude_bin0',\n 'BEAM0101/geolocation/latitude_bin0_error',\n 'BEAM0101/geolocation/latitude_lastbin',\n 'BEAM0101/geolocation/latitude_lastbin_error',\n 'BEAM0101/geolocation/local_beam_azimuth',\n 'BEAM0101/geolocation/local_beam_elevation',\n 'BEAM0101/geolocation/lon_highestreturn',\n 'BEAM0101/geolocation/lon_lowestmode',\n 'BEAM0101/geolocation/longitude_bin0',\n 'BEAM0101/geolocation/longitude_bin0_error',\n 'BEAM0101/geolocation/longitude_lastbin',\n 'BEAM0101/geolocation/longitude_lastbin_error',\n 'BEAM0101/geolocation/shot_number',\n 'BEAM0101/geolocation/solar_azimuth',\n 'BEAM0101/geolocation/solar_elevation',\n 'BEAM0101/l2a_quality_flag',\n 'BEAM0101/l2b_quality_flag',\n 'BEAM0101/land_cover_data/landsat_treecover',\n 'BEAM0101/land_cover_data/landsat_water_persistence',\n 'BEAM0101/land_cover_data/leaf_off_doy',\n 'BEAM0101/land_cover_data/leaf_off_flag',\n 'BEAM0101/land_cover_data/leaf_on_cycle',\n 'BEAM0101/land_cover_data/leaf_on_doy',\n 'BEAM0101/land_cover_data/modis_nonvegetated',\n 'BEAM0101/land_cover_data/modis_nonvegetated_sd',\n 'BEAM0101/land_cover_data/modis_treecover',\n 'BEAM0101/land_cover_data/modis_treecover_sd',\n 'BEAM0101/land_cover_data/pft_class',\n 'BEAM0101/land_cover_data/region_class',\n 'BEAM0101/land_cover_data/urban_focal_window_size',\n 'BEAM0101/land_cover_data/urban_proportion',\n 'BEAM0101/master_frac',\n 'BEAM0101/master_int',\n 'BEAM0101/num_detectedmodes',\n 'BEAM0101/omega',\n 'BEAM0101/pai',\n 'BEAM0101/pai_z',\n 'BEAM0101/pavd_z',\n 'BEAM0101/pgap_theta',\n 'BEAM0101/pgap_theta_error',\n 'BEAM0101/pgap_theta_z',\n 'BEAM0101/rg',\n 'BEAM0101/rh100',\n 'BEAM0101/rhog',\n 'BEAM0101/rhog_error',\n 'BEAM0101/rhov',\n 'BEAM0101/rhov_error',\n 'BEAM0101/rossg',\n 'BEAM0101/rv',\n 'BEAM0101/rx_processing/algorithmrun_flag_a1',\n 'BEAM0101/rx_processing/algorithmrun_flag_a2',\n 'BEAM0101/rx_processing/algorithmrun_flag_a3',\n 'BEAM0101/rx_processing/algorithmrun_flag_a4',\n 'BEAM0101/rx_processing/algorithmrun_flag_a5',\n 'BEAM0101/rx_processing/algorithmrun_flag_a6',\n 'BEAM0101/rx_processing/pgap_theta_a1',\n 'BEAM0101/rx_processing/pgap_theta_a2',\n 'BEAM0101/rx_processing/pgap_theta_a3',\n 'BEAM0101/rx_processing/pgap_theta_a4',\n 'BEAM0101/rx_processing/pgap_theta_a5',\n 'BEAM0101/rx_processing/pgap_theta_a6',\n 'BEAM0101/rx_processing/pgap_theta_error_a1',\n 'BEAM0101/rx_processing/pgap_theta_error_a2',\n 'BEAM0101/rx_processing/pgap_theta_error_a3',\n 'BEAM0101/rx_processing/pgap_theta_error_a4',\n 'BEAM0101/rx_processing/pgap_theta_error_a5',\n 'BEAM0101/rx_processing/pgap_theta_error_a6',\n 'BEAM0101/rx_processing/rg_a1',\n 'BEAM0101/rx_processing/rg_a2',\n 'BEAM0101/rx_processing/rg_a3',\n 'BEAM0101/rx_processing/rg_a4',\n 'BEAM0101/rx_processing/rg_a5',\n 'BEAM0101/rx_processing/rg_a6',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a1',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a2',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a3',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a4',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a5',\n 'BEAM0101/rx_processing/rg_eg_amplitude_a6',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a1',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a2',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a3',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a4',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a5',\n 'BEAM0101/rx_processing/rg_eg_amplitude_error_a6',\n 'BEAM0101/rx_processing/rg_eg_center_a1',\n 'BEAM0101/rx_processing/rg_eg_center_a2',\n 'BEAM0101/rx_processing/rg_eg_center_a3',\n 'BEAM0101/rx_processing/rg_eg_center_a4',\n 'BEAM0101/rx_processing/rg_eg_center_a5',\n 'BEAM0101/rx_processing/rg_eg_center_a6',\n 'BEAM0101/rx_processing/rg_eg_center_error_a1',\n 'BEAM0101/rx_processing/rg_eg_center_error_a2',\n 'BEAM0101/rx_processing/rg_eg_center_error_a3',\n 'BEAM0101/rx_processing/rg_eg_center_error_a4',\n 'BEAM0101/rx_processing/rg_eg_center_error_a5',\n 'BEAM0101/rx_processing/rg_eg_center_error_a6',\n 'BEAM0101/rx_processing/rg_eg_chisq_a1',\n 'BEAM0101/rx_processing/rg_eg_chisq_a2',\n 'BEAM0101/rx_processing/rg_eg_chisq_a3',\n 'BEAM0101/rx_processing/rg_eg_chisq_a4',\n 'BEAM0101/rx_processing/rg_eg_chisq_a5',\n 'BEAM0101/rx_processing/rg_eg_chisq_a6',\n 'BEAM0101/rx_processing/rg_eg_flag_a1',\n 'BEAM0101/rx_processing/rg_eg_flag_a2',\n 'BEAM0101/rx_processing/rg_eg_flag_a3',\n 'BEAM0101/rx_processing/rg_eg_flag_a4',\n 'BEAM0101/rx_processing/rg_eg_flag_a5',\n 'BEAM0101/rx_processing/rg_eg_flag_a6',\n 'BEAM0101/rx_processing/rg_eg_gamma_a1',\n 'BEAM0101/rx_processing/rg_eg_gamma_a2',\n 'BEAM0101/rx_processing/rg_eg_gamma_a3',\n 'BEAM0101/rx_processing/rg_eg_gamma_a4',\n 'BEAM0101/rx_processing/rg_eg_gamma_a5',\n 'BEAM0101/rx_processing/rg_eg_gamma_a6',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a1',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a2',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a3',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a4',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a5',\n 'BEAM0101/rx_processing/rg_eg_gamma_error_a6',\n 'BEAM0101/rx_processing/rg_eg_niter_a1',\n 'BEAM0101/rx_processing/rg_eg_niter_a2',\n 'BEAM0101/rx_processing/rg_eg_niter_a3',\n 'BEAM0101/rx_processing/rg_eg_niter_a4',\n 'BEAM0101/rx_processing/rg_eg_niter_a5',\n 'BEAM0101/rx_processing/rg_eg_niter_a6',\n 'BEAM0101/rx_processing/rg_eg_sigma_a1',\n 'BEAM0101/rx_processing/rg_eg_sigma_a2',\n 'BEAM0101/rx_processing/rg_eg_sigma_a3',\n 'BEAM0101/rx_processing/rg_eg_sigma_a4',\n 'BEAM0101/rx_processing/rg_eg_sigma_a5',\n 'BEAM0101/rx_processing/rg_eg_sigma_a6',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a1',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a2',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a3',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a4',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a5',\n 'BEAM0101/rx_processing/rg_eg_sigma_error_a6',\n 'BEAM0101/rx_processing/rg_error_a1',\n 'BEAM0101/rx_processing/rg_error_a2',\n 'BEAM0101/rx_processing/rg_error_a3',\n 'BEAM0101/rx_processing/rg_error_a4',\n 'BEAM0101/rx_processing/rg_error_a5',\n 'BEAM0101/rx_processing/rg_error_a6',\n 'BEAM0101/rx_processing/rv_a1',\n 'BEAM0101/rx_processing/rv_a2',\n 'BEAM0101/rx_processing/rv_a3',\n 'BEAM0101/rx_processing/rv_a4',\n 'BEAM0101/rx_processing/rv_a5',\n 'BEAM0101/rx_processing/rv_a6',\n 'BEAM0101/rx_processing/rx_energy_a1',\n 'BEAM0101/rx_processing/rx_energy_a2',\n 'BEAM0101/rx_processing/rx_energy_a3',\n 'BEAM0101/rx_processing/rx_energy_a4',\n 'BEAM0101/rx_processing/rx_energy_a5',\n 'BEAM0101/rx_processing/rx_energy_a6',\n 'BEAM0101/rx_processing/shot_number',\n 'BEAM0101/rx_range_highestreturn',\n 'BEAM0101/rx_sample_count',\n 'BEAM0101/rx_sample_start_index',\n 'BEAM0101/selected_l2a_algorithm',\n 'BEAM0101/selected_mode',\n 'BEAM0101/selected_mode_flag',\n 'BEAM0101/selected_rg_algorithm',\n 'BEAM0101/sensitivity',\n 'BEAM0101/shot_number',\n 'BEAM0101/stale_return_flag',\n 'BEAM0101/surface_flag']\n\n\nThere are several datasets for each beam. View the GEDI L2B Dictionary for more details. You can also print the description for desired datasets.\n\nprint('pai: ', gediL2B['BEAM0101/pai'].attrs['description'])\nprint('pai_z: ', gediL2B['BEAM0101/pai_z'].attrs['description'])\nprint('pavd_z: ', gediL2B['BEAM0101/pavd_z'].attrs['description'])\nprint('shot_number: ', gediL2B['BEAM0101/geolocation/shot_number'].attrs['description'])\nprint('rh100: ', gediL2B['BEAM0101/rh100'].attrs['description'])\nprint('Quality Flag: ', gediL2B['BEAM0101/l2b_quality_flag'].attrs['description'])\n\npai:  Total plant area index\npai_z:  Vertical PAI profile from canopy height (z) to ground (z=0) with a vertical step size of dZ, where cover(z &gt; z_max) = 0\npavd_z:  Vertical Plant Area Volume Density profile with a vertical step size of dZ\nshot_number:  Unique shot ID.\nrh100:  Height above ground of the received waveform signal start (rh[101] from L2A)\nQuality Flag:  Flag simpilfying selection of most useful data for Level 2B\n\n\n\n\nWe will set the shot index used as an example from the GEDI L1B Tutorial and GEDI L2A Tutorial to show how to subset a single shot of GEDI L2B data."
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#subset-by-layer-and-create-a-geodataframe",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#subset-by-layer-and-create-a-geodataframe",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "4.1 Subset by Layer and Create a Geodataframe ",
-    "text": "4.1 Subset by Layer and Create a Geodataframe \n\nRead in the SDS and take a representative sample (every 100th shot) and append to lists, then use the lists to generate a pandas dataframe.\n\nlonSample, latSample, shotSample, qualitySample, beamSample = [], [], [], [], []  # Set up lists to store data\n\n# Open the SDS\nlats = gediL2B[f'{beamNames[0]}/geolocation/lat_lowestmode'][()]\nlons = gediL2B[f'{beamNames[0]}/geolocation/lon_lowestmode'][()]\nshots = gediL2B[f'{beamNames[0]}/geolocation/shot_number'][()]\nquality = gediL2B[f'{beamNames[0]}/l2b_quality_flag'][()]\n\n# Take every 100th shot and append to list\nfor i in range(len(shots)):\n    if i % 100 == 0:\n        shotSample.append(str(shots[i]))\n        lonSample.append(lons[i])\n        latSample.append(lats[i])\n        qualitySample.append(quality[i])\n        beamSample.append(beamNames[0])\n            \n# Write all of the sample shots to a dataframe\nlatslons = pd.DataFrame({'Beam': beamSample, 'Shot Number': shotSample, 'Longitude': lonSample, 'Latitude': latSample,\n                         'Quality Flag': qualitySample})\nlatslons\n\n\n\n\n\n\n\n\nBeam\nShot Number\nLongitude\nLatitude\nQuality Flag\n\n\n\n\n0\nBEAM0000\n196830000300204328\n-150.407079\n51.480311\n0\n\n\n1\nBEAM0000\n196830000300204428\n-150.363476\n51.474715\n0\n\n\n2\nBEAM0000\n196830000300204528\n-150.322943\n51.470677\n0\n\n\n3\nBEAM0000\n196830000300204628\n-150.280632\n51.465678\n0\n\n\n4\nBEAM0000\n196830000300204728\n-150.239797\n51.461442\n0\n\n\n...\n...\n...\n...\n...\n...\n\n\n1532\nBEAM0000\n196830000300357528\n-77.574387\n0.617701\n0\n\n\n1533\nBEAM0000\n196830000300357628\n-77.544344\n0.575149\n0\n\n\n1534\nBEAM0000\n196830000300357728\n-77.514584\n0.532945\n0\n\n\n1535\nBEAM0000\n196830000300357828\n-77.484620\n0.490324\n0\n\n\n1536\nBEAM0000\n196830000300357928\n-77.454636\n0.447691\n0\n\n\n\n\n1537 rows × 5 columns\n\n\n\n\n\nAbove is a dataframe containing columns describing the beam, shot number, lat/lon location, and quality information about each shot.\n\n\nSide Note: Wondering what the 0’s and 1’s for l2b_quality_flag mean?\n\n\nAbove, 0 is poor quality and a quality_flag value of 1 indicates the laser shot meets criteria based on energy, sensitivity, amplitude, and real-time surface tracking quality. We will show an example of how to quality filter GEDI data.\n\n# Clean up variables that will no longer be needed\n# del beamSample, quality, qualitySample, gediL2B_objs, latSample, lats, lonSample, lons, shotSample, shots \n\n\n\nBelow, create an additional column called ‘geometry’ that contains a shapely point generated from each lat/lon location from the shot.\n\n# Take the lat/lon dataframe and convert each lat/lon to a shapely point\nlatslons['geometry'] = latslons.apply(lambda row: Point(row.Longitude, row.Latitude), axis=1)\n\n\n\nNext, convert to a Geopandas GeoDataFrame.\n\n# Convert to a Geodataframe\nlatslons = gp.GeoDataFrame(latslons)\nlatslons = latslons.drop(columns=['Latitude','Longitude'])\nlatslons['geometry']\n\n0       POINT (-150.40708 51.48031)\n1       POINT (-150.36348 51.47471)\n2       POINT (-150.32294 51.47068)\n3       POINT (-150.28063 51.46568)\n4       POINT (-150.23980 51.46144)\n                   ...             \n1532      POINT (-77.57439 0.61770)\n1533      POINT (-77.54434 0.57515)\n1534      POINT (-77.51458 0.53295)\n1535      POINT (-77.48462 0.49032)\n1536      POINT (-77.45464 0.44769)\nName: geometry, Length: 1537, dtype: geometry\n\n\n\n\nPull out and plot an example shapely point below."
-  },
-  {
-    "objectID": "tutorials/GEDI_L2B_V2_earthaccess.html#visualize-a-geodataframe",
-    "href": "tutorials/GEDI_L2B_V2_earthaccess.html#visualize-a-geodataframe",
-    "title": "Getting Started with GEDI L2B Version 2 Data in Python",
-    "section": "4.2 Visualize a GeoDataFrame ",
-    "text": "4.2 Visualize a GeoDataFrame \n\nIn this section, use the GeoDataFrame and the geoviews python package to spatially visualize the location of the GEDI shots on a basemap and import a GeoJSON file of the spatial region of interest for the use case example: Redwood National Park.\n\n# Define a function for visualizing GEDI points\ndef pointVisual(features, vdims):\n    return (gvts.EsriImagery * gv.Points(features, vdims=vdims).options(tools=['hover'], height=500, width=900, size=5, \n                                                                        color='yellow', fontsize={'xticks': 10, 'yticks': 10, \n                                                                                                  'xlabel':16, 'ylabel': 16}))\n\n\n\nImport a GeoJSON of Reserva de la Biósfera Calakmul National Park as an additional GeoDataFrame.\n\ncalakmul = gp.GeoDataFrame.from_file(f'{data_dir}calakmul.geojson')  # Import GeoJSON as GeoDataFrame\n\n\ncalakmul\n\n\n\n\n\n\n\n\ngeometry\n\n\n\n\n0\nPOLYGON ((-89.00000 19.00000, -91.50000 19.000...\n\n\n\n\n\n\n\n\ncalakmul['geometry'][0]  # Plot GeoDataFrame\n\n\n\n\n\n\nDefining the vdims below will allow you to hover over specific shots and view information about them.\n\n# Create a list of geodataframe columns to be included as attributes in the output map\nvdims = []\nfor f in latslons:\n    if f not in ['geometry']:\n        vdims.append(f)\nvdims\n\n['Beam', 'Shot Number', 'Quality Flag']\n\n\n\n\nBelow, combine a plot of the Redwood National Park Boundary (combine two geoviews plots using *) with the point visual mapping function defined above in order to plot (1) the representative GEDI shots, (2) the region of interest, and (3) a basemap layer.\n\n# Call the function for plotting the GEDI points\ngv.Polygons(calakmul['geometry']).opts(line_color='red', color=None) * pointVisual(latslons, vdims = vdims)\n\n\n\n\n\n  \n\n\n\n\n\n\nEach GEDI shot has a unique shot identifier (shot number) that is available within each data group of the product. The shot number is important to retain in any data subsetting as it will allow the user to link any shot record back to the original orbit data, and to link any shot and its data between the L1 and L2 products. The standard format for GEDI Shots is as follows:"
   },
   {
     "objectID": "tutorials/data-access/index.html",
