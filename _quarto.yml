@@ -35,15 +35,17 @@ website:
               text: "NASA and the Cloud"
             - href: tutorials/jupyterhub_demo/jupyterhub_demo.ipynb
               text: "CryoCloud"
-        - section: "Data Discovery and Access"
+        - section: "Search and Access NASA Earthdata"
           contents: 
             - href: tutorials/data-access/earthdata-search.md
               text: "Earthdata Search"
+        - section: "NASA ICESat-2 Mission"
+          contents: 
             - href: tutorials/data-access/index.ipynb
-              text: "Programmatic Access"
+              text: "earthaccess for data discovery and access"
             - href: tutorials/data-access/icepyx.ipynb
-              text: "Icepyx"
-        - section: "GEDI / IS2 Science Tutorial"
+              text: "Icepyx for data discovery and access"
+        - section: "NASA GEDI Mission"
           contents: 
             - tutorials/index.md
             - href: tutorials/science/gedi-l4a-agbd.ipynb
