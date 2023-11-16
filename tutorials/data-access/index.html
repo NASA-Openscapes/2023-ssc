@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../../tutorials/data-access/icepyx.html" rel="next">
+<link href="../../tutorials/data-access/earthdata-search.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -152,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Earthdata Search</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/data-access/earthaccess.md" rel="" target="">
+    <a class="dropdown-item" href="../../tutorials/data-access/index.html" rel="" target="">
  <span class="dropdown-text">Programmatic Access</span></a>
   </li>  
         <li>
@@ -188,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Accessing and working with ICESat-2 data in the cloud</strong></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/data-access/earthdata-search.html">Data Discovery and Access</a></li><li class="breadcrumb-item"><a href="../../tutorials/data-access/index.html">Programmatic Access</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -259,13 +261,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Data Discovery and Access</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/data-access/earthdata-search.html" class="sidebar-item-text sidebar-link">
@@ -274,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data-access/earthaccess.md" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/data-access/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Programmatic Access</span></a>
   </div>
 </li>
@@ -406,12 +408,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Measurements taken every 70 cm along the satellite’s ground track, roughly 11 m wide footprint.</li>
 </ul>
 <p>The number of photons that return to the telescope depends on surface reflectivity and cloud cover (which obscures ATLAS’s view of Earth). As such, the spatial resolution of signal photons varies.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".images/icesat2-schematic.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICESat-2 Beam Structure</figcaption>
-</figure>
-</div>
+<p><img src="https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/icesat2-schematic.png" width="400px"></p>
 </section>
 <section id="icesat-2-land-and-water-products" class="level3">
 <h3 class="anchored" data-anchor-id="icesat-2-land-and-water-products">ICESat-2: Land and Water Products</h3>
@@ -1060,6 +1057,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tutorials/data-access/earthdata-search.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Earthdata Search</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tutorials/data-access/icepyx.html" class="pagination-link">
+        <span class="nav-page-text">Icepyx</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
