@@ -161,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Programmatic Access</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/data-access/icepyx.md" rel="" target="">
+    <a class="dropdown-item" href="../../tutorials/data-access/icepyx.html" rel="" target="">
  <span class="dropdown-text">Icepyx</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -289,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data-access/icepyx.md" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/data-access/icepyx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Icepyx</span></a>
   </div>
 </li>
@@ -345,6 +345,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#import-modules" id="toc-import-modules" class="nav-link" data-scroll-target="#import-modules">Import Modules</a></li>
   <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
+  <li><a href="#create-harmony-client-object" id="toc-create-harmony-client-object" class="nav-link" data-scroll-target="#create-harmony-client-object">Create Harmony Client object</a></li>
+  <li><a href="#retrieve-concept-id" id="toc-retrieve-concept-id" class="nav-link" data-scroll-target="#retrieve-concept-id">Retrieve Concept ID</a></li>
+  <li><a href="#define-request-parameters" id="toc-define-request-parameters" class="nav-link" data-scroll-target="#define-request-parameters">Define Request Parameters</a></li>
+  <li><a href="#create-and-submit-harmony-request" id="toc-create-and-submit-harmony-request" class="nav-link" data-scroll-target="#create-and-submit-harmony-request">Create and Submit Harmony Request</a></li>
+  <li><a href="#read-subset-files" id="toc-read-subset-files" class="nav-link" data-scroll-target="#read-subset-files">Read Subset files</a></li>
+  <li><a href="#quality-filter-and-plot" id="toc-quality-filter-and-plot" class="nav-link" data-scroll-target="#quality-filter-and-plot">Quality Filter and Plot</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further Resources</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/NASA-Openscapes/2023-ssc/blob/main/tutorials/science/gedi-l4a-agbd.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/NASA-Openscapes/2023-ssc/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -402,28 +409,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="import-modules" class="level2">
 <h2 class="anchored" data-anchor-id="import-modules">Import Modules</h2>
 <div class="cell" data-tags="[]" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import python modules</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> h5py</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests <span class="im">as</span> re</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> harmony <span class="im">import</span> Client, Collection, Environment, Request</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">'whitegrid'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> h5py</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests <span class="im">as</span> re</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> harmony <span class="im">import</span> Client, Collection, Environment, Request</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">'whitegrid'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="authentication" class="level2">
 <h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
 <p>NASA Harmony API requires <a href="https://urs.earthdata.nasa.gov/">NASA Earthdata Login (EDL)</a>. You can use the <a href="https://nsidc.github.io/earthaccess/">earthaccess</a> Python library to set up authetincation. Alternatively, you can also login to harmony_client directly by passing EDL authentication as the following in the Jupyter Notebook itself:</p>
 <pre><code>harmony_client = Client(auth=("your EDL username", "your EDL password"))</code></pre>
+</section>
+<section id="create-harmony-client-object" class="level2">
+<h2 class="anchored" data-anchor-id="create-harmony-client-object">Create Harmony Client object</h2>
 <p>First, we create a Harmony Client object. If you are passing the EDL authentication, please do as shown above with <code>auth</code> parameter.</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>harmony_client <span class="op">=</span> Client()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="retrieve-concept-id" class="level2">
+<h2 class="anchored" data-anchor-id="retrieve-concept-id">Retrieve Concept ID</h2>
 <p>Now let’s retrieve the <code>Concept ID</code> of the GEDI L4A dataset. The <code>Concept ID</code> is NASA Earthdata’s unique ID for its dataset.</p>
 <div class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GEDI L4A DOI </span></span>
@@ -437,21 +449,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>'C2237824918-ORNL_CLOUD'</code></pre>
 </div>
 </div>
+</section>
+<section id="define-request-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="define-request-parameters">Define Request Parameters</h2>
 <p>Let’s create a Harmony Collection object with the concept_id retrieved above. We will also define the GEDI L4A variables of interest and temporal range.</p>
 <div class="cell" data-tags="[]" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>collection <span class="op">=</span> Collection(<span class="bu">id</span><span class="op">=</span>concept_id)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># gedi beams</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>beams <span class="op">=</span> [<span class="st">'BEAM0000'</span>, <span class="st">'BEAM0001'</span>, <span class="st">'BEAM0010'</span>, <span class="st">'BEAM0011'</span>, <span class="st">'BEAM0101'</span>,<span class="st">'BEAM0110'</span>,<span class="st">'BEAM1000'</span>,<span class="st">'BEAM1011'</span>]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>beams <span class="op">=</span> [<span class="st">'BEAM0000'</span>, <span class="st">'BEAM0001'</span>, <span class="st">'BEAM0010'</span>, <span class="st">'BEAM0011'</span>, <span class="st">'BEAM0101'</span>, <span class="st">'BEAM0110'</span>, <span class="st">'BEAM1000'</span>, <span class="st">'BEAM1011'</span>]</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># gedi variables</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">vars</span> <span class="op">=</span> [<span class="st">'agbd'</span>, <span class="st">'l4_quality_flag'</span>, <span class="st">'elev_lowestmode'</span>, <span class="st">'land_cover_data/pft_class'</span>]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="st">'agbd'</span>, <span class="st">'l4_quality_flag'</span>, <span class="st">'elev_lowestmode'</span>, <span class="st">'land_cover_data/pft_class'</span>]</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># combine variables and beams</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="ss">f'/</span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> b <span class="kw">in</span> beams <span class="cf">for</span> v <span class="kw">in</span> <span class="bu">vars</span>]</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="ss">f'/</span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> b <span class="kw">in</span> beams <span class="cf">for</span> v <span class="kw">in</span> variables]</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>temporal_range <span class="op">=</span> {<span class="st">'start'</span>: datetime(<span class="dv">2019</span>, <span class="dv">4</span>, <span class="dv">17</span>), </span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'stop'</span>: datetime(<span class="dv">2023</span>, <span class="dv">3</span>, <span class="dv">31</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We will use the spatial extent of a <a href="https://en.wikipedia.org/wiki/La_Primavera_Biosphere_Reserve">La Primavera Biosphere Reserve</a> provided as a GeoJSON file at <code>bosque_primavera.json</code>. Let’s open this file and compute its bound.</p>
+<p>We will use the spatial extent of a <a href="https://en.wikipedia.org/wiki/La_Primavera_Biosphere_Reserve">La Primavera Biosphere Reserve</a> provided as a GeoJSON file at <code>bosque_primavera.json</code>. Let’s open and plot this file.</p>
 <div class="cell" data-tags="[]" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>poly_json <span class="op">=</span> <span class="st">'bosque_primavera.json'</span></span>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>poly_json <span class="op">=</span> <span class="st">'../data-access/bosque_primavera.json'</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> gpd.read_file(poly_json) </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax<span class="op">=</span>poly.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>).plot(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>), alpha<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">'blue'</span>, edgecolor<span class="op">=</span><span class="st">'red'</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
@@ -460,6 +475,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="gedi-l4a-agbd_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
 </div>
 </div>
+</section>
+<section id="create-and-submit-harmony-request" class="level2">
+<h2 class="anchored" data-anchor-id="create-and-submit-harmony-request">Create and Submit Harmony Request</h2>
 <p>Now we can create a Harmony request with variables, temporal range, and bounding box and submit the request using the Harmony client object. We will use the <code>download_all</code> method, which uses a multithreaded downloader and returns a <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent future</a>. Futures are asynchronous and let us use the downloaded file as soon as the download is complete while other files are still being downloaded.</p>
 <div class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>request <span class="op">=</span> Request(collection<span class="op">=</span>collection, </span>
@@ -570,6 +588,9 @@ Job is running with errors.
  [ Processing: 100% ] |###################################################| [|]</code></pre>
 </div>
 </div>
+</section>
+<section id="read-subset-files" class="level2">
+<h2 class="anchored" data-anchor-id="read-subset-files">Read Subset files</h2>
 <p>All the subsetted files are saved as <code>_subsetted.h5</code>. Let’s read these <code>h5</code> files into a pandas dataframe.</p>
 <div class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>subset_df <span class="op">=</span> pd.DataFrame()</span>
@@ -702,6 +723,9 @@ Job is running with errors.
 </div>
 </div>
 </div>
+</section>
+<section id="quality-filter-and-plot" class="level2">
+<h2 class="anchored" data-anchor-id="quality-filter-and-plot">Quality Filter and Plot</h2>
 <p>We can now quality filter the dataset and only retrieve the good quality shots for trees and shrub cover plant functional types (PFTs).</p>
 <div class="cell" data-tags="[]" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MCD12Q1 PFT types</span></span>
@@ -724,7 +748,7 @@ Job is running with errors.
 <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>gdf <span class="op">=</span> gpd.GeoDataFrame(subset_df, geometry<span class="op">=</span>gpd.points_from_xy(subset_df.lon_lowestmode, subset_df.lat_lowestmode))</span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>gdf.crs<span class="op">=</span><span class="st">"EPSG:4326"</span></span>
 <span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ax1=gdf_epsg3857.plot(color='white', alpha=0.3, linewidth=5, )</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">200</span>, </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">300</span>, </span>
 <span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>                                                      linewidth<span class="op">=</span><span class="dv">0</span>, legend<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
 <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
 <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve'</span>)</span>
@@ -746,7 +770,24 @@ Job is running with errors.
 <p><img src="gedi-l4a-agbd_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<p>Additional tutorials on discovering, accessing, and using GEDI Level 3 and Level 4 data products are available at https://github.com/ornldaac/gedi_tutorials.</p>
+<p>Let’s also plot how the AGBD is distributed across elevation ranges for different PFTs.</p>
+<div class="cell" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>gdf[<span class="st">'elev_bin'</span>]<span class="op">=</span>pd.cut(gdf[<span class="st">'elev_lowestmode'</span>], bins <span class="op">=</span><span class="bu">range</span>(<span class="dv">1000</span>, <span class="dv">2600</span>, <span class="dv">200</span>))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.catplot(x <span class="op">=</span> <span class="st">"elev_bin"</span>, y <span class="op">=</span> <span class="st">"agbd"</span>, data <span class="op">=</span> gdf[mask], col<span class="op">=</span><span class="st">"pft_class"</span>, kind<span class="op">=</span><span class="st">"box"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>g.set_xticklabels(rotation<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>g.set_titles(<span class="st">"</span><span class="sc">{col_name}</span><span class="st">"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> g.axes.flat:</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    ax.set_title(pft_legend[<span class="bu">int</span>(<span class="bu">float</span>(ax.get_title()))])</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>g.set_axis_labels(<span class="st">"Elevation (m)"</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>sns.despine(top<span class="op">=</span><span class="va">False</span>, right<span class="op">=</span><span class="va">False</span>, left<span class="op">=</span><span class="va">False</span>, bottom<span class="op">=</span><span class="va">False</span>, offset<span class="op">=</span><span class="va">None</span>, trim<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="gedi-l4a-agbd_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further Resources</h2>
+<p>Additional tutorials on discovering, accessing, and using GEDI Level 3 and Level 4 data products are available at <a href="https://github.com/ornldaac/gedi_tutorials">https://github.com/ornldaac/gedi_tutorials</a>.</p>
 
 
 </section>
