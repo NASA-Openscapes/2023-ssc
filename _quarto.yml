@@ -33,7 +33,7 @@ website:
           contents: 
             - href: tutorials/cloud/cloud-paradigm.md
               text: "NASA and the Cloud"
-            - href: tutorials/cloud/index.md
+            - href: tutorials/jupyterhub_demo/jupyterhub_demo.ipynb
               text: "CryoCloud"
         - section: "Data Discovery and Access"
           contents: 
@@ -46,8 +46,11 @@ website:
         - section: "GEDI / IS2 Science Tutorial"
           contents: 
             - tutorials/index.md
-            - href: tutorials/GEDI_data_SSC23.ipynb
+            - href: tutorials/science/gedi-l4a-agbd.ipynb
+              text: "GEDI Level 4A Data"
+            - href: tutorials/science/gedi-data-ssc23.ipynb
               text: "GEDI Level 2B V002 Data"
+
             
           
 format:
