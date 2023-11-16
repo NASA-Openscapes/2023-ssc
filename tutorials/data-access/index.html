@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="dropdown-text">Programmatic Access</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/data-access/icepyx.html" rel="" target="">
+    <a class="dropdown-item" href="../../tutorials/data-access/icepyx.md" rel="" target="">
  <span class="dropdown-text">Icepyx</span></a>
   </li>  
         <li><hr class="dropdown-divider"></li>
@@ -276,7 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../tutorials/data-access/icepyx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../tutorials/data-access/icepyx.md" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Icepyx</span></a>
   </div>
 </li>
@@ -311,22 +311,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview"><strong>1. Tutorial Overview</strong></a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#intro-update" id="toc-intro-update" class="nav-link" data-scroll-target="#intro-update">Intro (update)</a></li>
   <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits"><strong>Credits</strong></a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives"><strong>Learning Objectives</strong></a></li>
+  <li><a href="#learning-objectives-update" id="toc-learning-objectives-update" class="nav-link" data-scroll-target="#learning-objectives-update"><strong>Learning Objectives [UPDATE] </strong></a></li>
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><strong>Prerequisites</strong></a></li>
   </ul></li>
-  <li><a href="#nasas-icesat-2-mission-land-and-water-products" id="toc-nasas-icesat-2-mission-land-and-water-products" class="nav-link" data-scroll-target="#nasas-icesat-2-mission-land-and-water-products"><strong>2. NASA’s ICESat-2 Mission: Land and Water Products</strong></a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-icesat-2" id="toc-introduction-to-icesat-2" class="nav-link" data-scroll-target="#introduction-to-icesat-2">Introduction to ICESat-2</a></li>
-  <li><a href="#icesat-2-land-and-water-products" id="toc-icesat-2-land-and-water-products" class="nav-link" data-scroll-target="#icesat-2-land-and-water-products">ICESat-2: Land and Water Products</a></li>
-  <li><a href="#atlasicesat-2-l3a-land-and-vegetation-height-atl08" id="toc-atlasicesat-2-l3a-land-and-vegetation-height-atl08" class="nav-link" data-scroll-target="#atlasicesat-2-l3a-land-and-vegetation-height-atl08">ATLAS/ICESat-2 L3A Land and Vegetation Height (ATL08)</a></li>
-  </ul></li>
-  <li><a href="#overview-of-icesat-2-nsidc-daac-data-tools-and-resources" id="toc-overview-of-icesat-2-nsidc-daac-data-tools-and-resources" class="nav-link" data-scroll-target="#overview-of-icesat-2-nsidc-daac-data-tools-and-resources"><strong>3. Overview of ICESat-2 NSIDC DAAC Data, Tools, and Resources</strong></a>
-  <ul class="collapse">
-  <li><a href="#overview-of-nsidc-data-and-resources" id="toc-overview-of-nsidc-data-and-resources" class="nav-link" data-scroll-target="#overview-of-nsidc-data-and-resources">Overview of NSIDC data and resources</a></li>
-  </ul></li>
-  <li><a href="#search-and-access-of-atl08-using-earthaccess" id="toc-search-and-access-of-atl08-using-earthaccess" class="nav-link" data-scroll-target="#search-and-access-of-atl08-using-earthaccess"><strong>4. Search and access of ATL08 using <code>earthaccess</code></strong></a></li>
+  <li><a href="#tutorial-steps" id="toc-tutorial-steps" class="nav-link" data-scroll-target="#tutorial-steps"><strong>2. Tutorial steps</strong></a></li>
   <li><a href="#import-packages" id="toc-import-packages" class="nav-link" data-scroll-target="#import-packages">Import Packages</a></li>
   <li><a href="#authenticate" id="toc-authenticate" class="nav-link" data-scroll-target="#authenticate">Authenticate</a></li>
   <li><a href="#search-for-icesat-2-collections" id="toc-search-for-icesat-2-collections" class="nav-link" data-scroll-target="#search-for-icesat-2-collections">Search for ICESat-2 Collections</a>
@@ -362,185 +352,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="tutorial-overview" class="level2">
 <h2 class="anchored" data-anchor-id="tutorial-overview"><strong>1. Tutorial Overview</strong></h2>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>The purpose of this notebook is to provide an introduction to the land and water data available from the NASA ICESat-2 Mission, along with an overview of data search and access options for the data. We will then provide examples in python for how to search and access the data using the <code>earthaccess</code> and <code>icepyx</code> software libraries.</p>
+<p>Outline: * ICESat-2 Data Access, NASA DAAC @ NSIDC * Overview of ICESat-2 Mission and land products (<a href="https://docs.google.com/presentation/d/1SZs7dyZ1K2CSVXS0txZ-LIvc-5Brn_D0pBEtzfQmvcE/edit#slide=id.g2374337d1d0_0_184">see USFS Application Workshop slides</a> * NSIDC DAAC resources / tools * Walk through myriad options with different capabilities/use cases * Modified version of <a href="https://icesat-2-2023.hackweek.io/tutorials/data-access-and-format/overview.html">table from IS2 Hackweek</a> * Basic earthaccess demo of ATL08 access * Need common area / time of interest across IS2 / GEDI tutorials</p>
+<ul>
+<li>The icepyx Software Library and Community</li>
+</ul>
+<section id="intro-update" class="level3">
+<h3 class="anchored" data-anchor-id="intro-update">Intro (update)</h3>
+<p>This notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the <code>earthaccess</code> package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. <strong>Direct Access</strong> is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.</p>
+<p>The Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of <em>analysis in place</em>. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2.</strong> If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.</p>
+<p>As an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using <code>xarray</code>. Land Ice Heights are then plotted using <code>hvplot</code>.</p>
+<p><code>earthaccess</code> is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both <em>DAAC-hosted</em> and <em>cloud-hosted</em> data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess</p>
 </section>
 <section id="credits" class="level3">
 <h3 class="anchored" data-anchor-id="credits"><strong>Credits</strong></h3>
-<p>The notebook was created by Rachel Wegener, University of Maryland; Luis Lopez, NSIDC DAAC; and Amy Steiker, NSIDC DAAC.</p>
+<p>The notebook was created by …</p>
 </section>
-<section id="learning-objectives" class="level3">
-<h3 class="anchored" data-anchor-id="learning-objectives"><strong>Learning Objectives</strong></h3>
-<p>By the end of this demonstration you will be able to:</p>
-<ol type="1">
-<li>Learn about the coverage, resolution, and structure of land and water data from the NASA ICESat-2 mission;</li>
-<li>Understand the available resources at the National Snow and Ice Data Center (NSIDC), including user support documents, data access options, and data tools and services such as OpenAltimetry;</li>
-<li>Use <code>earthaccess</code> and <code>hvplot</code> to search, access, and visualize ICESat-2 data within a cloud environment.</li>
-<li>Use <code>icepyx</code> to explore and subset variables within ICESat-2 land height files.</li>
-</ol>
+<section id="learning-objectives-update" class="level3">
+<h3 class="anchored" data-anchor-id="learning-objectives-update"><strong>Learning Objectives [UPDATE] </strong></h3>
+<p>By the end of this demonstration you will be able to:<br>
+1. use <code>earthaccess</code> to search for ICESat-2 data using spatial and temporal filters and explore search results;<br>
+2. open data granules using direct access to the ICESat-2 S3 bucket;<br>
+3. load a HDF5 group into an <code>xarray.Dataset</code>;<br>
+4. visualize the land ice heights using <code>hvplot</code>.</p>
 </section>
 <section id="prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="prerequisites"><strong>Prerequisites</strong></h3>
 <p>See <a href="https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html">Prerequisites</a></p>
 </section>
 </section>
-<section id="nasas-icesat-2-mission-land-and-water-products" class="level2">
-<h2 class="anchored" data-anchor-id="nasas-icesat-2-mission-land-and-water-products"><strong>2. NASA’s ICESat-2 Mission: Land and Water Products</strong></h2>
-<section id="introduction-to-icesat-2" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-icesat-2">Introduction to ICESat-2</h3>
-<p>A quick summary of the ICESat-2 Mission and its instrument, ATLAS: Advanced Topographic Laser Altimeter System:</p>
-<ul>
-<li>Height determined using round-trip travel time of laser light (photon counting lidar)</li>
-<li>10,000 laser pulses released per second, split into 3 weak/strong beam pairs at a wavelength of 532 nanometers (bright green on the visible spectrum).</li>
-<li>Measurements taken every 70 cm along the satellite’s ground track, roughly 11 m wide footprint.</li>
-</ul>
-<p>The number of photons that return to the telescope depends on surface reflectivity and cloud cover (which obscures ATLAS’s view of Earth). As such, the spatial resolution of signal photons varies.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".images/icesat2-schematic.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICESat-2 Beam Structure</figcaption>
-</figure>
-</div>
-</section>
-<section id="icesat-2-land-and-water-products" class="level3">
-<h3 class="anchored" data-anchor-id="icesat-2-land-and-water-products">ICESat-2: Land and Water Products</h3>
-<p>There are over 20 ICESat-2 data products, structured by processing level and surface type:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src=".images/land-veg-products.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">ICESat-2 land and water products</figcaption>
-</figure>
-</div>
-<p>Additional quick look products are available:</p>
-<ul>
-<li>Satellite observations available within 3 days, versus 30-45 days for standard products</li>
-<li>Supports decision-making applications: vegetation height, surface water and flooding, land surface deformation from landslides and volcanoes</li>
-<li>Note that geolocation and height uncertainty is greater for these products (see user guides for more info)</li>
-</ul>
-<p><a href="https://nsidc.org/data/atl08QL/">L3A Land and Vegetation Height Quick Look (ATL08QL)</a></p>
-<p><a href="https://nsidc.org/data/atl13QL/">L3A Along Track Inland Surface Water Data Quick Look (ATL13QL)</a></p>
-<p>See https://nsidc.org/data/icesat-2/products for more details.</p>
-</section>
-<section id="atlasicesat-2-l3a-land-and-vegetation-height-atl08" class="level3">
-<h3 class="anchored" data-anchor-id="atlasicesat-2-l3a-land-and-vegetation-height-atl08">ATLAS/ICESat-2 L3A Land and Vegetation Height (ATL08)</h3>
-<p>https://doi.org/10.5067/ATLAS/ATL08.006</p>
-<p>ATL08 contains heights for both terrain and canopy in the along-track direction, plus other descriptive parameters. * Data are derived from geolocated, time-tagged photon heights from the ATLAS/ICESat-2 L2A Global Geolocated Photon Data (ATL03) product.</p>
-<p><strong>Spatial Resolution</strong> * Canopy and ground surfaces are processed in fixed 100 m data segments * Each segment typically contain more than 100 signal photons but may contain less.</p>
-<p><strong>Temporal Resolution</strong> * 91-day repeat cycle along each of ATLAS/ICESat-2’s 1,387 Reference Ground Tracks (RGTs)</p>
-<p><strong>Uncertainty</strong> * Expected ranging precision for flat surfaces: Standard deviation of ~25 cm. * Terrain height uncertainty estimates depend on ATL03, and local uncertainties within each 100 m segment</p>
-<p>See the <a href="https://nsidc.org/sites/default/files/documents/user-guide/atl08-v006-userguide.pdf">ATL08 User Guide</a> for more information.</p>
-</section>
-</section>
-<section id="overview-of-icesat-2-nsidc-daac-data-tools-and-resources" class="level2">
-<h2 class="anchored" data-anchor-id="overview-of-icesat-2-nsidc-daac-data-tools-and-resources"><strong>3. Overview of ICESat-2 NSIDC DAAC Data, Tools, and Resources</strong></h2>
-<section id="overview-of-nsidc-data-and-resources" class="level3">
-<h3 class="anchored" data-anchor-id="overview-of-nsidc-data-and-resources">Overview of NSIDC data and resources</h3>
-<p>The NASA National Snow and Ice Data Center Distributed Active Archive Center (<a href="https://nsidc.org/data/data-programs/nsidc-daac">NSIDC DAAC</a>) provides over 800 data sets covering the Earth’s cryosphere and more, all of which are available to the public free of charge. These data can be used to study topics relating to snow cover, sea ice, ice sheets, ice shelves, glaciers, frozen ground, soil moisture, climate interactions, and more. Beyond providing these data, NSIDC creates tools for data access, supports data users, performs scientific research, and educates the public about the cryosphere.</p>
-<section id="data-access-tools-for-icesat-2" class="level4">
-<h4 class="anchored" data-anchor-id="data-access-tools-for-icesat-2">Data Access Tools for ICESat-2</h4>
-<p>There are many tool and access options available for ICESat-2, which can be found on each of the dataset landing pages on NSIDC’s website. See the <a href="https://nsidc.org/data/atl08/versions/6#anchor-1"><strong>ATL08 Data Access &amp; Tools</strong></a> section as an example. This notebook will descibe three of those options in more detail: <a href="https://openaltimetry.earthdatacloud.nasa.gov/data/icesat2/">OpenAltimetry</a>, <a href="https://icepyx.readthedocs.io/en/latest/">icepyx</a>, and <a href="https://nsidc.github.io/earthaccess/">earthaccess</a>.</p>
-<p><strong>Using OpenAltimetry to Visualize ICESat-2 Data</strong></p>
-<p>Key functions of <a href="https://openaltimetry.earthdatacloud.nasa.gov/data/icesat2/">OpenAltimetry</a> include: * Ground track filtering and visualization * On-the-fly plotting of segment elevations and photon clouds based date and region of interest * Access data in CSV or subsetted HDF5 format * Plot and analyze photon data from your area of interest using a Jupyter Notebook</p>
-<p>Upload a shapefile of interest; view track coverage: <img src=".images/oa-viz.png" class="img-fluid"></p>
-<p>Select a region; view elevation profile: <img src=".images/oa-plot.png" class="img-fluid"></p>
-</section>
-<section id="navigating-icesat-2-tool-access-options" class="level4">
-<h4 class="anchored" data-anchor-id="navigating-icesat-2-tool-access-options">Navigating ICESat-2 Tool &amp; Access options:</h4>
-<p>This table provides an overview of the capabilities across the tools and services highlighted in this notebook:</p>
-<table class="table">
-<colgroup>
-<col style="width: 52%">
-<col style="width: 11%">
-<col style="width: 17%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th><code>icepyx</code></th>
-<th><code>earthaccess</code></th>
-<th>OpenAltimetry</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Filter spatially using:</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>- Interactive map widget</td>
-<td></td>
-<td></td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>- Bounding Box</td>
-<td>x</td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="even">
-<td>- Polygon</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>- GeoJSON or Shapefile</td>
-<td>x</td>
-<td></td>
-<td>x</td>
-</tr>
-<tr class="even">
-<td>Filter by time and date</td>
-<td>x</td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>Preview data</td>
-<td>x</td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="even">
-<td>Download data from DAAC</td>
-<td>x</td>
-<td>x</td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>Access cloud-hosted data</td>
-<td>x</td>
-<td>x</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Subset (spatially, temporally, by variable)</td>
-<td>x</td>
-<td></td>
-<td>x</td>
-</tr>
-<tr class="odd">
-<td>Plot data with built-in methods</td>
-<td>x</td>
-<td></td>
-<td>x</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-</section>
-<section id="search-and-access-of-atl08-using-earthaccess" class="level2">
-<h2 class="anchored" data-anchor-id="search-and-access-of-atl08-using-earthaccess"><strong>4. Search and access of ATL08 using <code>earthaccess</code></strong></h2>
-<p>This notebook demonstrates searching for cloud-hosted ICESat-2 data and directly accessing Land Ice Height (ATL06) granules from an Amazon Compute Cloud (EC2) instance using the <code>earthaccess</code> package. NASA data “in the cloud” are stored in Amazon Web Services (AWS) Simple Storage Service (S3) Buckets. <strong>Direct Access</strong> is an efficient way to work with data stored in an S3 Bucket when you are working in the cloud. Cloud-hosted granules can be opened and loaded into memory without the need to download them first. This allows you take advantage of the scalability and power of cloud computing.</p>
-<p>The Amazon Global cloud is divided into geographical regions. To have direct access to data stored in a region, our compute instance - a virtual computer that we create to perform processing operations in place of using our own desktop or laptop - must be in the same region as the data. This is a fundamental concept of <em>analysis in place</em>. <strong>NASA cloud-hosted data is in Amazon Region us-west2. So your compute instance must also be in us-west2.</strong> If we wanted to use data stored in another region, to use direct access for that data, we would start a compute instance in that region.</p>
-<p>As an example data collection, we use ICESat-2 Land Ice Height (ATL06) over the Juneau Icefield, AK, for March 2003. ICESat-2 data granules, including ATL06, are stored in HDF5 format. We demonstrate how to open an HDF5 granule and access data variables using <code>xarray</code>. Land Ice Heights are then plotted using <code>hvplot</code>.</p>
-<p><code>earthaccess</code> is a package developed by Luis Lopez (NSIDC developer) to allow easy search of the NASA Common Metadata Repository (CMR) and download of NASA data collections. It can be used for programmatic search and access for both <em>DAAC-hosted</em> and <em>cloud-hosted</em> data. It manages authenticating using Earthdata Login credentials which are then used to obtain the S3 tokens that are needed for S3 direct access. https://github.com/nsidc/earthaccess</p>
+<section id="tutorial-steps" class="level2">
+<h2 class="anchored" data-anchor-id="tutorial-steps"><strong>2. Tutorial steps</strong></h2>
 </section>
 <section id="import-packages" class="level2">
 <h2 class="anchored" data-anchor-id="import-packages">Import Packages</h2>
