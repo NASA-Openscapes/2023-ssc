@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/index.html</loc>
-    <lastmod>2023-11-16T14:15:37.500Z</lastmod>
+    <lastmod>2023-11-16T14:42:31.024Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/authentication/NASA_Earthdata_Authentication.html</loc>
-    <lastmod>2023-11-16T14:15:36.828Z</lastmod>
+    <lastmod>2023-11-16T14:42:30.368Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-access/Intro_xarray_hvplot.html</loc>
-    <lastmod>2023-11-16T14:15:35.576Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthaccess.html</loc>
-    <lastmod>2023-11-16T14:15:34.552Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthdata-search.html</loc>
-    <lastmod>2023-11-16T14:15:32.824Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/gedi_l4a_agbd.html</loc>
-    <lastmod>2023-11-16T14:15:30.656Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/setup.html</loc>
-    <lastmod>2023-11-16T14:15:29.732Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/index.html</loc>
-    <lastmod>2023-11-16T14:15:28.828Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/science/Intro_xarray_hvplot.html</loc>
-    <lastmod>2023-11-16T14:15:28.220Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/jupyterhub_demo/jupyterhub_demo.html</loc>
-    <lastmod>2023-11-16T14:15:25.572Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html</loc>
-    <lastmod>2023-11-16T14:15:23.936Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/further-resources.html</loc>
-    <lastmod>2023-11-16T14:15:25.188Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/GEDI_data_SSC23.html</loc>
-    <lastmod>2023-11-16T14:15:27.704Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/cloud-paradigm.html</loc>
-    <lastmod>2023-11-16T14:15:28.532Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/schedule.html</loc>
-    <lastmod>2023-11-16T14:15:29.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/index.html</loc>
-    <lastmod>2023-11-16T14:15:30.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/index.html</loc>
-    <lastmod>2023-11-16T14:15:32.400Z</lastmod>
+    <lastmod>2023-11-16T14:42:29.132Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/icepyx.html</loc>
-    <lastmod>2023-11-16T14:15:33.816Z</lastmod>
+    <lastmod>2023-11-16T14:42:27.952Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthdata-search.html</loc>
+    <lastmod>2023-11-16T14:42:26.852Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/gedi_l4a_agbd.html</loc>
+    <lastmod>2023-11-16T14:42:24.800Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/setup.html</loc>
+    <lastmod>2023-11-16T14:42:23.948Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/index.html</loc>
+    <lastmod>2023-11-16T14:42:23.132Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/science/Intro_xarray_hvplot.html</loc>
+    <lastmod>2023-11-16T14:42:22.556Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/jupyterhub_demo/jupyterhub_demo.html</loc>
+    <lastmod>2023-11-16T14:42:19.984Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/prerequisites.html</loc>
+    <lastmod>2023-11-16T14:42:18.692Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/further-resources.html</loc>
+    <lastmod>2023-11-16T14:42:19.628Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/GEDI_data_SSC23.html</loc>
+    <lastmod>2023-11-16T14:42:22.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/cloud/cloud-paradigm.html</loc>
+    <lastmod>2023-11-16T14:42:22.856Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/schedule.html</loc>
+    <lastmod>2023-11-16T14:42:23.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/index.html</loc>
+    <lastmod>2023-11-16T14:42:24.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/index.html</loc>
+    <lastmod>2023-11-16T14:42:26.444Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/2023-ssc/tutorials/data-access/earthaccess.html</loc>
+    <lastmod>2023-11-16T14:42:27.532Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-access/Earthdata_Cloud__Single_File__Direct_S3_Access_Clip_COG_Example.html</loc>
-    <lastmod>2023-11-16T14:15:35.076Z</lastmod>
+    <lastmod>2023-11-16T14:42:28.664Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/data-discovery/Data_Discovery_CMR_API.html</loc>
-    <lastmod>2023-11-16T14:15:36.264Z</lastmod>
+    <lastmod>2023-11-16T14:42:29.800Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/2023-ssc/how-tos/authentication/NASA_Earthdata_Login_Token.html</loc>
-    <lastmod>2023-11-16T14:15:37.180Z</lastmod>
+    <lastmod>2023-11-16T14:42:30.716Z</lastmod>
   </url>
 </urlset>
