@@ -324,6 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#dataset" id="toc-dataset" class="nav-link" data-scroll-target="#dataset">Dataset</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a>
   <ul class="collapse">
   <li><a href="#compute-environment" id="toc-compute-environment" class="nav-link" data-scroll-target="#compute-environment">1. Compute environment</a></li>
@@ -331,6 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#additional-requirements" id="toc-additional-requirements" class="nav-link" data-scroll-target="#additional-requirements">3. Additional Requirements</a></li>
   </ul></li>
   <li><a href="#import-modules" id="toc-import-modules" class="nav-link" data-scroll-target="#import-modules">Import Modules</a></li>
+  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.dev/NASA-Openscapes/2023-ssc/blob/main/tutorials/data-access/gedi_l4a_agbd.ipynb" class="toc-action">Edit this page</a></p><p><a href="https://github.com/NASA-Openscapes/2023-ssc/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -362,8 +364,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
 <ul>
 <li>Use <a href="https://harmony.earthdata.nasa.gov/">NASA’s Harmony Services</a> to retrieve the GEDI L4A dataset. The Harmony API allows access to selected variables for the dataset within the spatial-temporal bounds without having to download the whole data file.</li>
-<li>Compute summaries of AGBD across various plant functional types (PFTs)</li>
+<li>Compute summaries of AGBD across various plant functional types (PFTs) in the study area.</li>
 </ul>
+</section>
+<section id="dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
+<p>The <a href="https://doi.org/10.3334/ORNLDAAC/2056">Global Ecosystem Dynamics Investigation (GEDI) L4A Footprint Level Aboveground Biomass Density (AGBD)</a> dataset provides predictions of the aboveground biomass density (AGBD; in Mg/ha) and estimates of the prediction standard error within each sampled geolocated GEDI footprint. GEDI L4A dataset is available for the period starting 2019-04-17 and covers 52 N to 52 S latitudes. GEDI L4A data files are natively in HDF5 format. GEDI L4A dataset should be cited as: &gt; Dubayah, R.O., J. Armston, J.R. Kellner, L. Duncanson, S.P. Healey, P.L. Patterson, S. Hancock, H. Tang, J. Bruening, M.A.&nbsp;Hofton, J.B. Blair, and S.B. Luthcke. 2022. GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1. ORNL DAAC, Oak Ridge, Tennessee, USA. doi:10.3334/ORNLDAAC/2056</p>
 </section>
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
@@ -393,12 +399,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> harmony <span class="im">import</span> BBox, Client, Collection, Environment, Request</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> harmony <span class="im">import</span> Client, Collection, Environment, Request</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">'whitegrid'</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">'ignore'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>sns.<span class="bu">set</span>(style<span class="op">=</span><span class="st">'whitegrid'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="authentication" class="level2">
+<h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
 <p>NASA Harmony API requires <a href="https://urs.earthdata.nasa.gov/">NASA Earthdata Login (EDL)</a>. You can use the <a href="https://nsidc.github.io/earthaccess/">earthaccess</a> Python library to set up authetincation. Alternatively, you can also login to harmony_client directly by passing EDL authentication as the following in the Jupyter Notebook itself:</p>
 <pre><code>harmony_client = Client(auth=("your EDL username", "your EDL password"))</code></pre>
 <p>First, we create a Harmony Client object. If you are passing the EDL authentication, please do as shown above with <code>auth</code> parameter.</p>
@@ -427,19 +434,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">vars</span> <span class="op">=</span> [<span class="st">'agbd'</span>, <span class="st">'l4_quality_flag'</span>, <span class="st">'elev_lowestmode'</span>, <span class="st">'land_cover_data/pft_class'</span>]</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># combine variables and beams</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="ss">f'/</span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>v<span class="sc">}</span><span class="ss">'</span> <span class="cf">for</span> b <span class="kw">in</span> beams <span class="cf">for</span> v <span class="kw">in</span> <span class="bu">vars</span>]</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>temporal_range <span class="op">=</span> {<span class="st">'start'</span>: datetime(<span class="dv">2022</span>, <span class="dv">1</span>, <span class="dv">1</span>), </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'stop'</span>: datetime(<span class="dv">2022</span>, <span class="dv">12</span>, <span class="dv">31</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>temporal_range <span class="op">=</span> {<span class="st">'start'</span>: datetime(<span class="dv">2019</span>, <span class="dv">4</span>, <span class="dv">17</span>), </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'stop'</span>: datetime(<span class="dv">2023</span>, <span class="dv">3</span>, <span class="dv">31</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We will use the spatial extent of a <a href="https://en.wikipedia.org/wiki/La_Primavera_Biosphere_Reserve">La Primavera Biosphere Reserve</a> provided as a GeoJSON file at <code>bosque_primavera.json</code>. Let’s open this file and compute its bound.</p>
 <div class="cell" data-tags="[]" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>salix <span class="op">=</span> gpd.read_file(<span class="st">"bosque_primavera.json"</span>) </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> salix.total_bounds</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># bounding box for Harmony</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>bounding_box <span class="op">=</span> BBox(w<span class="op">=</span>b[<span class="dv">0</span>], s<span class="op">=</span>b[<span class="dv">1</span>], e<span class="op">=</span>b[<span class="dv">2</span>], n<span class="op">=</span>b[<span class="dv">3</span>])</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># map of Salix plots</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>ax<span class="op">=</span>salix.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>).plot(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>), alpha<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">'green'</span>, edgecolor<span class="op">=</span><span class="st">'red'</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>poly_json <span class="op">=</span> <span class="st">'bosque_primavera.json'</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> gpd.read_file(poly_json) </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax<span class="op">=</span>poly.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>).plot(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">4</span>), alpha<span class="op">=</span><span class="fl">0.4</span>, color<span class="op">=</span><span class="st">'blue'</span>, edgecolor<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="gedi_l4a_agbd_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
 </div>
@@ -449,7 +453,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>request <span class="op">=</span> Request(collection<span class="op">=</span>collection, </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                  variables<span class="op">=</span>variables, </span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                  temporal<span class="op">=</span>temporal_range,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                  spatial<span class="op">=</span>bounding_box,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                  shape<span class="op">=</span>poly_json,</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>                  ignore_errors<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># submit harmony request, will return job id</span></span>
@@ -469,37 +473,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>            </span>
 <span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'Done downloading files.'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Processing job: b22f03bd-8201-47b8-9cf6-ef43dc87eb60
+<pre><code>Processing job: b7dfe272-7c9d-40d0-af68-71aaa056a5b2
 Waiting for the job to finish
 Downloading subset files...
-GEDI04_A_2022038005838_O17868_03_T07458_02_003_01_V002_subsetted.h5
-Downloaded: GEDI04_A_2022038005838_O17868_03_T07458_02_003_01_V002_subsetted.h5
-GEDI04_A_2022006042512_O17374_02_T08156_02_002_02_V002_subsetted.h5
-Downloaded: GEDI04_A_2022006042512_O17374_02_T08156_02_002_02_V002_subsetted.h5
+GEDI04_A_2020138102210_O08093_03_T04765_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020138102210_O08093_03_T04765_02_002_02_V002_subsetted.h5
+GEDI04_A_2019110215109_O02004_03_T03189_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019110215109_O02004_03_T03189_02_002_02_V002_subsetted.h5
+GEDI04_A_2020055190255_O06812_03_T02072_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020055190255_O06812_03_T02072_02_002_02_V002_subsetted.h5
+GEDI04_A_2020251133701_O09847_03_T08881_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020251133701_O09847_03_T08881_02_002_02_V002_subsetted.h5
+GEDI04_A_2019120085608_O02151_02_T02464_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019120085608_O02151_02_T02464_02_002_02_V002_subsetted.h5
+GEDI04_A_2020160162505_O08438_02_T03734_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020160162505_O08438_02_T03734_02_002_02_V002_subsetted.h5
+GEDI04_A_2020255120326_O09908_03_T10457_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020255120326_O09908_03_T10457_02_002_02_V002_subsetted.h5
+GEDI04_A_2020156175938_O08377_02_T05157_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020156175938_O08377_02_T05157_02_002_02_V002_subsetted.h5
+GEDI04_A_2019141004724_O02472_02_T01852_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019141004724_O02472_02_T01852_02_002_02_V002_subsetted.h5
+GEDI04_A_2021070122719_O12714_03_T10457_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021070122719_O12714_03_T10457_02_002_02_V002_subsetted.h5
+GEDI04_A_2020259103039_O09969_03_T06035_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020259103039_O09969_03_T06035_02_002_02_V002_subsetted.h5
+GEDI04_A_2021066140028_O12653_03_T07611_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021066140028_O12653_03_T07611_02_002_02_V002_subsetted.h5
+GEDI04_A_2021074105432_O12775_03_T08881_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021074105432_O12775_03_T08881_02_002_02_V002_subsetted.h5
+GEDI04_A_2021201084306_O14742_03_T06035_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021201084306_O14742_03_T06035_02_002_02_V002_subsetted.h5
+GEDI04_A_2021025205815_O12022_02_T08003_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021025205815_O12022_02_T08003_02_002_02_V002_subsetted.h5
+GEDI04_A_2020334045434_O11128_03_T06188_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020334045434_O11128_03_T06188_02_002_02_V002_subsetted.h5
+GEDI04_A_2021018000447_O11900_02_T00888_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021018000447_O11900_02_T00888_02_002_02_V002_subsetted.h5
+GEDI04_A_2021021223049_O11961_02_T05310_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021021223049_O11961_02_T05310_02_002_02_V002_subsetted.h5
+GEDI04_A_2019215042821_O03623_03_T04765_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019215042821_O03623_03_T04765_02_002_02_V002_subsetted.h5
+GEDI04_A_2021184062047_O14477_02_T10849_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021184062047_O14477_02_T10849_02_002_02_V002_subsetted.h5
+GEDI04_A_2021062153338_O12592_03_T06188_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021062153338_O12592_03_T06188_02_002_02_V002_subsetted.h5
+GEDI04_A_2021341012934_O16907_03_T01919_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021341012934_O16907_03_T01919_02_002_02_V002_subsetted.h5
+GEDI04_A_2021256015705_O15590_02_T06580_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2021256015705_O15590_02_T06580_02_002_02_V002_subsetted.h5
 GEDI04_A_2022088050647_O18646_03_T03189_02_003_01_V002_subsetted.h5
 Downloaded: GEDI04_A_2022088050647_O18646_03_T03189_02_003_01_V002_subsetted.h5
-GEDI04_A_2022316014330_O22180_02_T08156_02_003_01_V002_subsetted.h5
-Downloaded: GEDI04_A_2022316014330_O22180_02_T08156_02_003_01_V002_subsetted.h5
-GEDI04_A_2022244150958_O21072_03_T00496_02_003_01_V002_subsetted.h5
-Downloaded: GEDI04_A_2022244150958_O21072_03_T00496_02_003_01_V002_subsetted.h5
-GEDI04_A_2022129034426_O19281_02_T02464_02_003_01_V002_subsetted.h5
-Downloaded: GEDI04_A_2022129034426_O19281_02_T02464_02_003_01_V002_subsetted.h5
-GEDI04_A_2022201225441_O20410_02_T01041_02_003_02_V002_subsetted.h5
-Downloaded: GEDI04_A_2022201225441_O20410_02_T01041_02_003_02_V002_subsetted.h5
-GEDI04_A_2022224135830_O20761_02_T09273_02_003_01_V002_subsetted.h5
-Downloaded: GEDI04_A_2022224135830_O20761_02_T09273_02_003_01_V002_subsetted.h5
 GEDI04_A_2022305150115_O22018_03_T10457_02_003_01_V002_subsetted.h5
 Downloaded: GEDI04_A_2022305150115_O22018_03_T10457_02_003_01_V002_subsetted.h5
+GEDI04_A_2022244150958_O21072_03_T00496_02_003_01_V002_subsetted.h5
+Downloaded: GEDI04_A_2022244150958_O21072_03_T00496_02_003_01_V002_subsetted.h5
+GEDI04_A_2023012013558_O23126_02_T10849_02_003_01_V002_subsetted.h5
+Downloaded: GEDI04_A_2023012013558_O23126_02_T10849_02_003_01_V002_subsetted.h5
 GEDI04_A_2022251032645_O21173_02_T00888_02_003_01_V002_subsetted.h5
 Downloaded: GEDI04_A_2022251032645_O21173_02_T00888_02_003_01_V002_subsetted.h5
+GEDI04_A_2023005131909_O23025_03_T08881_02_003_01_V002_subsetted.h5
+Downloaded: GEDI04_A_2023005131909_O23025_03_T08881_02_003_01_V002_subsetted.h5
+GEDI04_A_2022129034426_O19281_02_T02464_02_003_01_V002_subsetted.h5
+Downloaded: GEDI04_A_2022129034426_O19281_02_T02464_02_003_01_V002_subsetted.h5
+GEDI04_A_2019320104704_O05256_03_T01919_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019320104704_O05256_03_T01919_02_002_02_V002_subsetted.h5
+GEDI04_A_2023032024707_O23437_03_T03342_02_003_01_V002_subsetted.h5
+Downloaded: GEDI04_A_2023032024707_O23437_03_T03342_02_003_01_V002_subsetted.h5
+GEDI04_A_2019326230359_O05357_02_T02311_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2019326230359_O05357_02_T02311_02_002_02_V002_subsetted.h5
+GEDI04_A_2020024073106_O06324_03_T00496_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020024073106_O06324_03_T00496_02_002_02_V002_subsetted.h5
+GEDI04_A_2020040011719_O06568_03_T04765_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020040011719_O06568_03_T04765_02_002_02_V002_subsetted.h5
+GEDI04_A_2020032042419_O06446_03_T03189_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020032042419_O06446_03_T03189_02_002_02_V002_subsetted.h5
+GEDI04_A_2020047221012_O06690_03_T00496_02_002_02_V002_subsetted.h5
+Downloaded: GEDI04_A_2020047221012_O06690_03_T00496_02_002_02_V002_subsetted.h5
 Done downloading files.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code> [ Processing: 100% ] |###################################################| [|]</code></pre>
+<pre><code> [ Processing:  86% ] |###########################################        | [|]
+Job is running with errors.
+ [ Processing: 100% ] |###################################################| [|]</code></pre>
 </div>
 </div>
 <p>All the subsetted files are saved as <code>_subsetted.h5</code>. Let’s read these <code>h5</code> files into a pandas dataframe.</p>
-<div class="cell" data-tags="[]" data-execution_count="10">
+<div class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>subset_df <span class="op">=</span> pd.DataFrame()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> subfile <span class="kw">in</span> glob(<span class="st">'*_subsetted.h5'</span>):</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    hf_in <span class="op">=</span> h5py.File(subfile, <span class="st">'r'</span>)</span>
@@ -526,7 +586,7 @@ Done downloading files.</code></pre>
 <span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    hf_in.close()</span>
 <span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="co"># print head of dataframe</span></span>
 <span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>subset_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -551,78 +611,78 @@ Done downloading files.</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>17.204693</td>
-<td>1.266801e+08</td>
-<td>1685.324097</td>
-<td>20.544943</td>
-<td>-103.506392</td>
-<td>173740000200217668</td>
+<td>82.577484</td>
+<td>6.644999e+07</td>
+<td>1540.948242</td>
+<td>20.717487</td>
+<td>-103.594671</td>
+<td>65680000300329876</td>
 <td>0</td>
-<td>6</td>
-<td>173740000200217668</td>
-<td>20.544941</td>
-<td>-103.506393</td>
-<td>173740000200217668</td>
+<td>4</td>
+<td>65680000300329876</td>
+<td>20.717488</td>
+<td>-103.594671</td>
+<td>65680000300329876</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>80.229103</td>
-<td>1.266801e+08</td>
-<td>1654.737671</td>
-<td>20.545329</td>
-<td>-103.506056</td>
-<td>173740000200217669</td>
+<td>17.222200</td>
+<td>6.644999e+07</td>
+<td>1539.156738</td>
+<td>20.717087</td>
+<td>-103.594327</td>
+<td>65680000300329877</td>
 <td>0</td>
-<td>8</td>
-<td>173740000200217669</td>
-<td>20.545329</td>
-<td>-103.506056</td>
-<td>173740000200217669</td>
+<td>4</td>
+<td>65680000300329877</td>
+<td>20.717087</td>
+<td>-103.594327</td>
+<td>65680000300329877</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>98.612915</td>
-<td>1.266801e+08</td>
-<td>1627.466553</td>
-<td>20.545720</td>
-<td>-103.505717</td>
-<td>173740000200217670</td>
+<td>11.274220</td>
+<td>6.644999e+07</td>
+<td>1538.657593</td>
+<td>20.716686</td>
+<td>-103.593983</td>
+<td>65680000300329878</td>
 <td>0</td>
-<td>8</td>
-<td>173740000200217670</td>
-<td>20.545718</td>
-<td>-103.505718</td>
-<td>173740000200217670</td>
+<td>4</td>
+<td>65680000300329878</td>
+<td>20.716686</td>
+<td>-103.593983</td>
+<td>65680000300329878</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>12.086709</td>
-<td>1.266801e+08</td>
-<td>1624.882080</td>
-<td>20.546119</td>
-<td>-103.505376</td>
-<td>173740000200217671</td>
+<td>22.247044</td>
+<td>6.644999e+07</td>
+<td>1538.058594</td>
+<td>20.716285</td>
+<td>-103.593640</td>
+<td>65680000300329879</td>
 <td>0</td>
-<td>8</td>
-<td>173740000200217671</td>
-<td>20.546119</td>
-<td>-103.505376</td>
-<td>173740000200217671</td>
+<td>4</td>
+<td>65680000300329879</td>
+<td>20.716285</td>
+<td>-103.593640</td>
+<td>65680000300329879</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>11.747370</td>
-<td>1.266801e+08</td>
-<td>1624.152100</td>
-<td>20.546522</td>
-<td>-103.505034</td>
-<td>173740000200217672</td>
+<td>11.021081</td>
+<td>6.644999e+07</td>
+<td>1538.167603</td>
+<td>20.715884</td>
+<td>-103.593297</td>
+<td>65680000300329880</td>
 <td>0</td>
-<td>8</td>
-<td>173740000200217672</td>
-<td>20.546522</td>
-<td>-103.505034</td>
-<td>173740000200217672</td>
+<td>4</td>
+<td>65680000300329880</td>
+<td>20.715884</td>
+<td>-103.593297</td>
+<td>65680000300329880</td>
 </tr>
 </tbody>
 </table>
@@ -631,40 +691,50 @@ Done downloading files.</code></pre>
 </div>
 </div>
 <p>We can now quality filter the dataset and only retrieve the good quality shots for trees and shrub cover plant functional types (PFTs).</p>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-tags="[]" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># MCD12Q1 PFT types</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pft_legend <span class="op">=</span> {<span class="dv">0</span> : <span class="st">'Water Bodies'</span>, <span class="dv">1</span>: <span class="st">'Evergreen Needleleaf Trees'</span>, <span class="dv">2</span>: <span class="st">'Evergreen Broadleaf Trees'</span>, </span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>: <span class="st">'Deciduous Needleleaf Trees'</span>,  <span class="dv">4</span>: <span class="st">'Deciduous Broadleaf Trees'</span>, <span class="dv">5</span>: <span class="st">'Shrub'</span>, <span class="dv">6</span>: <span class="st">'Grass'</span>,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">7</span>: <span class="st">'Cereal Croplands'</span>, <span class="dv">8</span>: <span class="st">'Broadleaf Croplands'</span>, <span class="dv">9</span>: <span class="st">'Urban and Built-up Lands'</span>, </span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>              <span class="dv">10</span>: <span class="st">'Permanent Snow and Ice'</span>, <span class="dv">11</span>: <span class="st">'Barren'</span>, <span class="dv">255</span>: <span class="st">'Unclassified'</span>}</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># creating mask with good quality shots and trees/shrubs pft class</span></span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (subset_df[<span class="st">'l4_quality_flag'</span>]<span class="op">==</span><span class="dv">1</span>) <span class="op">&amp;</span> (subset_df[<span class="st">'pft_class'</span>] <span class="op">&lt;=</span> <span class="dv">5</span> )</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># create geopandas dtframe</span></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>gdf <span class="op">=</span> gpd.GeoDataFrame(subset_df, geometry<span class="op">=</span>gpd.points_from_xy(subset_df.lon_lowestmode, subset_df.lat_lowestmode))</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>gdf.crs<span class="op">=</span><span class="st">"EPSG:4326"</span></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># ax1=gdf_epsg3857.plot(color='white', alpha=0.3, linewidth=5, )</span></span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">200</span>, </span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                                                      linewidth<span class="op">=</span><span class="dv">0</span>, legend<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve in 2022'</span>)</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>pft_legend <span class="op">=</span> {<span class="dv">0</span> : <span class="st">'Water Bodies'</span>, </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>              <span class="dv">1</span>: <span class="st">'Evergreen Needleleaf Trees'</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>              <span class="dv">2</span>: <span class="st">'Evergreen Broadleaf Trees'</span>, </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>              <span class="dv">3</span>: <span class="st">'Deciduous Needleleaf Trees'</span>,  </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>              <span class="dv">4</span>: <span class="st">'Deciduous Broadleaf Trees'</span>, </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>              <span class="dv">5</span>: <span class="st">'Shrub'</span>, </span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>              <span class="dv">6</span>: <span class="st">'Grass'</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>              <span class="dv">7</span>: <span class="st">'Cereal Croplands'</span>, </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>              <span class="dv">8</span>: <span class="st">'Broadleaf Croplands'</span>, </span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>              <span class="dv">9</span>: <span class="st">'Urban and Built-up Lands'</span>, </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>              <span class="dv">10</span>: <span class="st">'Permanent Snow and Ice'</span>, </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>              <span class="dv">11</span>: <span class="st">'Barren'</span>, </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>              <span class="dv">255</span>: <span class="st">'Unclassified'</span>}</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># creating mask with good quality shots and trees/shrubs pft class</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (subset_df[<span class="st">'l4_quality_flag'</span>]<span class="op">==</span><span class="dv">1</span>) <span class="op">&amp;</span> (subset_df[<span class="st">'pft_class'</span>] <span class="op">&lt;=</span> <span class="dv">5</span> )</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># create geopandas dtframe</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>gdf <span class="op">=</span> gpd.GeoDataFrame(subset_df, geometry<span class="op">=</span>gpd.points_from_xy(subset_df.lon_lowestmode, subset_df.lat_lowestmode))</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>gdf.crs<span class="op">=</span><span class="st">"EPSG:4326"</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ax1=gdf_epsg3857.plot(color='white', alpha=0.3, linewidth=5, )</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">200</span>, </span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>                                                      linewidth<span class="op">=</span><span class="dv">0</span>, legend<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve'</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="gedi_l4a_agbd_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>We can now plot the distribution of the AGBD by plant functional types (PFTs) for the good quality shots.</p>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">5</span>))</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> gdf[mask].groupby(<span class="st">'pft_class'</span>)[<span class="st">'agbd'</span>].<span class="op">\</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="bu">apply</span>(<span class="kw">lambda</span> x: sns.distplot(x, label <span class="op">=</span> pft_legend[x.name], hist<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="bu">apply</span>(<span class="kw">lambda</span> x: sns.histplot(x, label <span class="op">=</span> pft_legend[x.name], kde<span class="op">=</span><span class="va">True</span>))</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'agbd (Mg / ha)'</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve in 2022'</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve'</span>)</span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="gedi_l4a_agbd_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
 </div>
 </div>
+<p>Additional tutorials on discovering, accessing, and using GEDI Level 3 and Level 4 data products are available at https://github.com/ornldaac/gedi_tutorials.</p>
 
 
 </section>
