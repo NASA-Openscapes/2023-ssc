@@ -358,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#import-modules" id="toc-import-modules" class="nav-link" data-scroll-target="#import-modules">Import Modules</a></li>
   <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication">Authentication</a></li>
-  <li><a href="#create-harmony-client-object" id="toc-create-harmony-client-object" class="nav-link" data-scroll-target="#create-harmony-client-object">Create Harmony Client object</a></li>
+  <li><a href="#create-harmony-client-object" id="toc-create-harmony-client-object" class="nav-link" data-scroll-target="#create-harmony-client-object">Create Harmony Client Object</a></li>
   <li><a href="#retrieve-concept-id" id="toc-retrieve-concept-id" class="nav-link" data-scroll-target="#retrieve-concept-id">Retrieve Concept ID</a></li>
   <li><a href="#define-request-parameters" id="toc-define-request-parameters" class="nav-link" data-scroll-target="#define-request-parameters">Define Request Parameters</a></li>
   <li><a href="#create-and-submit-harmony-request" id="toc-create-and-submit-harmony-request" class="nav-link" data-scroll-target="#create-and-submit-harmony-request">Create and Submit Harmony Request</a></li>
@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This tutorial will demonstrate how to directly access and subset the GEDI L4A dataset using <a href="https://harmony.earthdata.nasa.gov/">NASA’s Harmony Services</a> and compute summary of aboveground biomass for a protected area in Mexico. The Harmony API allows seamless access and production of analysis-ready Earth observation data across different DAACs, by enabling cloud-based spatial, temporal, and variable subsetting and data conversions. The GEDI L4A dataset is available from the Harmony API.</p>
+<p>This tutorial will demonstrate how to directly access and subset the GEDI L4A dataset using <a href="https://harmony.earthdata.nasa.gov/">NASA’s Harmony Services</a> and compute a summary of aboveground biomass density for a protected area in Mexico. The Harmony API allows seamless access and production of analysis-ready Earth observation data across different DAACs by enabling cloud-based spatial, temporal, and variable subsetting and data conversions. The GEDI L4A dataset is available from the Harmony API.</p>
 </section>
 <section id="learning-objectives" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
@@ -401,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<p>The <a href="https://doi.org/10.3334/ORNLDAAC/2056">Global Ecosystem Dynamics Investigation (GEDI) L4A Footprint Level Aboveground Biomass Density (AGBD)</a> dataset provides predictions of the aboveground biomass density (AGBD; in Mg/ha) and estimates of the prediction standard error within each sampled geolocated GEDI footprint. GEDI L4A dataset is available for the period starting 2019-04-17 and covers 52 N to 52 S latitudes. GEDI L4A data files are natively in HDF5 format. GEDI L4A dataset should be cited as: &gt; Dubayah, R.O., J. Armston, J.R. Kellner, L. Duncanson, S.P. Healey, P.L. Patterson, S. Hancock, H. Tang, J. Bruening, M.A.&nbsp;Hofton, J.B. Blair, and S.B. Luthcke. 2022. GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1. ORNL DAAC, Oak Ridge, Tennessee, USA. doi:10.3334/ORNLDAAC/2056</p>
+<p>The <a href="https://doi.org/10.3334/ORNLDAAC/2056">Global Ecosystem Dynamics Investigation (GEDI) L4A Footprint Level Aboveground Biomass Density (AGBD)</a> dataset provides predictions of the aboveground biomass density (AGBD; in Mg/ha) and estimates of the prediction standard error within each sampled geolocated GEDI footprint. GEDI L4A dataset is available for the period starting 2019-04-17 and covers 52 N to 52 S latitudes. GEDI L4A data files are natively in HDF5 format. GEDI L4A dataset should be cited as: - Dubayah, R.O., J. Armston, J.R. Kellner, L. Duncanson, S.P. Healey, P.L. Patterson, S. Hancock, H. Tang, J. Bruening, M.A.&nbsp;Hofton, J.B. Blair, and S.B. Luthcke. 2022. GEDI L4A Footprint Level Aboveground Biomass Density, Version 2.1. ORNL DAAC, Oak Ridge, Tennessee, USA. doi:10.3334/ORNLDAAC/2056</p>
 </section>
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
@@ -415,8 +415,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="additional-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="additional-requirements">3. Additional Requirements</h3>
-<p>While NASA’s Harmony services are available directly through RESTful API, we will use <a href="https://github.com/nasa/harmony-py">Harmony-Py</a> Python library for this tutorial. Harmony-Py provides a friendly interface for integrating with NASA’s Harmony Services. In addition to Harmony-Py, this tutorial requires the following Python modules installed in your system: <code>earthaccess</code>, <code>h5py</code>, <code>requests</code>, <code>datetime</code>, <code>pandas</code>, <code>geopandas</code>, <code>contextily</code>. Requirements are also in <a href="requirements.txt">requirements.txt</a>. To install the necessary Python modules, you can copy the requirements.txt from this repository and run:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">--user</span> h5py, requests, datetime, pandas, geopandas, contextily</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>While NASA’s Harmony services are available directly through RESTful API, we will use <a href="https://github.com/nasa/harmony-py">Harmony-Py</a> Python library for this tutorial. Harmony-Py provides a friendly interface for integrating with NASA’s Harmony Services. In addition to Harmony-Py, this tutorial requires the following Python modules installed in your system: <code>earthaccess</code>, <code>h5py</code>, <code>requests</code>, <code>datetime</code>, <code>pandas</code>, <code>geopandas</code>, <code>contextily</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-U</span> harmony-py, h5py, requests, datetime, pandas, geopandas, contextily</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 </section>
 <section id="import-modules" class="level2">
@@ -437,25 +437,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="authentication" class="level2">
 <h2 class="anchored" data-anchor-id="authentication">Authentication</h2>
-<p>NASA Harmony API requires <a href="https://urs.earthdata.nasa.gov/">NASA Earthdata Login (EDL)</a>. You can use the <a href="https://nsidc.github.io/earthaccess/">earthaccess</a> Python library to set up authetincation. Alternatively, you can also login to harmony_client directly by passing EDL authentication as the following in the Jupyter Notebook itself:</p>
+<p>NASA Harmony API requires <a href="https://urs.earthdata.nasa.gov/">NASA Earthdata Login (EDL)</a>. You can use the <a href="https://nsidc.github.io/earthaccess/">earthaccess</a> Python library to set up authentication. Alternatively, you can also login to <code>harmony_client</code> directly by passing EDL authentication as the following in the Jupyter Notebook itself:</p>
 <pre><code>harmony_client = Client(auth=("your EDL username", "your EDL password"))</code></pre>
 </section>
 <section id="create-harmony-client-object" class="level2">
-<h2 class="anchored" data-anchor-id="create-harmony-client-object">Create Harmony Client object</h2>
-<p>First, we create a Harmony Client object. If you are passing the EDL authentication, please do as shown above with <code>auth</code> parameter.</p>
+<h2 class="anchored" data-anchor-id="create-harmony-client-object">Create Harmony Client Object</h2>
+<p>First, we create a Harmony Client object. If you are passing the EDL authentication, please do as shown above with the <code>auth</code> parameter.</p>
 <div class="cell" data-tags="[]" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>harmony_client <span class="op">=</span> Client()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="retrieve-concept-id" class="level2">
 <h2 class="anchored" data-anchor-id="retrieve-concept-id">Retrieve Concept ID</h2>
-<p>Now let’s retrieve the <code>Concept ID</code> of the GEDI L4A dataset. The <code>Concept ID</code> is NASA Earthdata’s unique ID for its dataset.</p>
+<p>Now, let’s retrieve the <code>Concept ID</code> of the GEDI L4A dataset. The <code>Concept ID</code> is NASA Earthdata’s unique ID for its dataset.</p>
 <div class="cell" data-tags="[]" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GEDI L4A DOI </span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>doi <span class="op">=</span> <span class="st">'10.3334/ORNLDAAC/2056'</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># CMR API base url</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>doisearch<span class="op">=</span><span class="ss">f'https://cmr.earthdata.nasa.gov/search/collections.json?doi=</span><span class="sc">{</span>doi<span class="sc">}</span><span class="ss">'</span> </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>doisearch <span class="op">=</span> <span class="ss">f'https://cmr.earthdata.nasa.gov/search/collections.json?doi=</span><span class="sc">{</span>doi<span class="sc">}</span><span class="ss">'</span> </span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>concept_id <span class="op">=</span> re.get(doisearch).json()[<span class="st">'feed'</span>][<span class="st">'entry'</span>][<span class="dv">0</span>][<span class="st">'id'</span>]</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>concept_id</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -477,7 +477,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>temporal_range <span class="op">=</span> {<span class="st">'start'</span>: datetime(<span class="dv">2019</span>, <span class="dv">4</span>, <span class="dv">17</span>), </span>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'stop'</span>: datetime(<span class="dv">2023</span>, <span class="dv">3</span>, <span class="dv">31</span>)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We will use the spatial extent of a <a href="https://en.wikipedia.org/wiki/La_Primavera_Biosphere_Reserve">La Primavera Biosphere Reserve</a> provided as a GeoJSON file at <code>bosque_primavera.json</code>. Let’s open and plot this file.</p>
+<p>We will use the spatial extent of the <a href="https://en.wikipedia.org/wiki/La_Primavera_Biosphere_Reserve">La Primavera Biosphere Reserve</a>, a protected natural area in western Mexico, provided as a GeoJSON file at <code>bosque_primavera.json</code>. Let’s open and plot this file.</p>
 <div class="cell" data-tags="[]" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>poly_json <span class="op">=</span> <span class="st">'../data-access/bosque_primavera.json'</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>poly <span class="op">=</span> gpd.read_file(poly_json) </span>
@@ -491,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="create-and-submit-harmony-request" class="level2">
 <h2 class="anchored" data-anchor-id="create-and-submit-harmony-request">Create and Submit Harmony Request</h2>
-<p>Now we can create a Harmony request with variables, temporal range, and bounding box and submit the request using the Harmony client object. We will use the <code>download_all</code> method, which uses a multithreaded downloader and returns a <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent future</a>. Futures are asynchronous and let us use the downloaded file as soon as the download is complete while other files are still being downloaded.</p>
+<p>Now, we can create a Harmony request with variables, temporal range, and bounding box and submit the request using the Harmony client object. We will use the <code>download_all</code> method, which uses a multithreaded downloader and returns a <a href="https://docs.python.org/3/library/concurrent.futures.html">concurrent future</a>. Futures are asynchronous and let us use the downloaded file as soon as the download is complete while other files are still being downloaded.</p>
 <div class="cell" data-tags="[]" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>request <span class="op">=</span> Request(collection<span class="op">=</span>collection, </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                  variables<span class="op">=</span>variables, </span>
@@ -604,7 +604,7 @@ Job is running with errors.
 </section>
 <section id="read-subset-files" class="level2">
 <h2 class="anchored" data-anchor-id="read-subset-files">Read Subset files</h2>
-<p>All the subsetted files are saved as <code>_subsetted.h5</code>. Let’s read these <code>h5</code> files into a pandas dataframe.</p>
+<p>All the subsetted files are saved as <code>_subsetted.h5</code>. Let’s read these <code>h5</code> files into the pandas dataframe.</p>
 <div class="cell" data-tags="[]" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>subset_df <span class="op">=</span> pd.DataFrame()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> subfile <span class="kw">in</span> glob(<span class="st">'*_subsetted.h5'</span>):</span>
@@ -755,22 +755,23 @@ Job is running with errors.
 <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>              <span class="dv">10</span>: <span class="st">'Permanent Snow and Ice'</span>, </span>
 <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>              <span class="dv">11</span>: <span class="st">'Barren'</span>, </span>
 <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>              <span class="dv">255</span>: <span class="st">'Unclassified'</span>}</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co"># creating mask with good quality shots and trees/shrubs pft class</span></span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (subset_df[<span class="st">'l4_quality_flag'</span>]<span class="op">==</span><span class="dv">1</span>) <span class="op">&amp;</span> (subset_df[<span class="st">'pft_class'</span>] <span class="op">&lt;=</span> <span class="dv">5</span> )</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># create geopandas dtframe</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>gdf <span class="op">=</span> gpd.GeoDataFrame(subset_df, geometry<span class="op">=</span>gpd.points_from_xy(subset_df.lon_lowestmode, subset_df.lat_lowestmode))</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co"># create geopandas dtframe</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>gdf <span class="op">=</span> gpd.GeoDataFrame(subset_df, geometry<span class="op">=</span>gpd.points_from_xy(subset_df.lon_lowestmode, subset_df.lat_lowestmode))</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># wgs84 coordinate</span></span>
 <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>gdf.crs<span class="op">=</span><span class="st">"EPSG:4326"</span></span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># ax1=gdf_epsg3857.plot(color='white', alpha=0.3, linewidth=5, )</span></span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">300</span>, </span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>                                                      linewidth<span class="op">=</span><span class="dv">0</span>, legend<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve'</span>)</span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># creating mask with good quality shots and trees/shrubs pft class</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> (gdf[<span class="st">'l4_quality_flag'</span>]<span class="op">==</span><span class="dv">1</span>) <span class="op">&amp;</span> (gdf[<span class="st">'pft_class'</span>] <span class="op">&lt;=</span> <span class="dv">5</span> )</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>ax1<span class="op">=</span> gdf.to_crs(epsg<span class="op">=</span><span class="dv">3857</span>)[mask].plot(column<span class="op">=</span><span class="st">'agbd'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="dv">300</span>, cmap <span class="op">=</span> <span class="st">'viridis'</span>,</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>                                                      linewidth<span class="op">=</span><span class="dv">0</span>, legend<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">4</span>))</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>plt.margins(y<span class="op">=</span><span class="fl">0.5</span>, x<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'GEDI L4A AGBD estimates by PFTs in La Primavera Biosphere Reserve'</span>)</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="gedi-l4a-agbd_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<p>We can now plot the distribution of the AGBD by plant functional types (PFTs) for the good quality shots.</p>
+<p>We will plot the distribution of the AGBD by plant functional types (PFTs) for good quality shots.</p>
 <div class="cell" data-tags="[]" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">5</span>))</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> gdf[mask].groupby(<span class="st">'pft_class'</span>)[<span class="st">'agbd'</span>].<span class="op">\</span></span>
