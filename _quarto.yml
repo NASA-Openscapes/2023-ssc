@@ -39,7 +39,7 @@ website:
           contents: 
             - href: tutorials/data-access/earthdata-search.md
               text: "Earthdata Search"
-            - href: tutorials/data-access/earthaccess.md
+            - href: tutorials/data-access/index.ipynb
               text: "Programmatic Access"
             - href: tutorials/data-access/icepyx.md
               text: "Icepyx"

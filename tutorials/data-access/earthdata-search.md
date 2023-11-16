@@ -12,7 +12,7 @@ Use the search box in the upper left to type key words. In this example we are i
 
 Type **GEDI** in the search bar Click on the **"Available from AWS Cloud"** filter option on the left.
 
-We can click on the (i) icon for the dataset to read more details, including the **dataset shortname** (helpful for programmatic workflows) just below the dataset name; here `ECO_L2T_LSTE`.  
+We can click on the (i) icon for the dataset to read more details, including the **dataset shortname** (helpful for programmatic workflows) just below the dataset name; here we are using a keyword `GEDI`.  
 
 ### Step 3. Explore the dataset details, including Cloud Access information  
 
@@ -24,9 +24,8 @@ Once we clicked the (i), scrolling down the info page for the dataset we will se
 - link that generates **AWS S3 Credentials** for in-cloud data access (we will cover this in the Direct Data Access Tutorials)  
 - link to **documentation** describing the In-region Direct S3 Access to Buckets. *Note*: these will be unique depending on the DAAC where the data is archived. (We will show examples of direct in-region access in Tutorial 3.)  
 
-![*Figure caption: Cloud access info in EDS*](../img/eds_cloud_access_info_ecostress.png)  
 
-![*Figure caption: Documentation describing the In-region Direct S3 Access to Buckets*](../img/cloud_access_documentation.png)  
+![*Figure caption: Documentation describing the In-region Direct S3 Access to Buckets*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-cloud-info.jpg)  
 
 **Note**: Clicking on "For Developers" to exapnd will provide programmatic endpoints such as those for the CMR API, and more.  
 
@@ -38,27 +37,33 @@ At the top of the dataset info section, click on *Search Results*, which will ta
 
 To download files for a granule click the download arrow on the card (or list row)  
 
-![*Figure caption: Download granules*](../img/eds_ecov002_l2t_lste_http_download.png)  
+![*Figure caption: Download granules*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-https-granule-download.jpg)  
 
 You can also get the S3 information (e.g., AWS region, bucket, temperary credentials for S3 access, and file names) by selecting the **AWS S3 Access** tab.  
 
-![*Figure caption: S3 access for granules*](../img/eds_ecov002_l2t_lste_s3_access.png)  
+![*Figure caption: S3 access for granules*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-granule-s3-download.jpg)  
 
 #### Step 4b. Download or data access for multiple granule  
 
 To download multiple granules, click on the green **+** symbol to add files to our project. Click on the green button towards the bottom that says "Download". This will take us to another page with options to customize our download or access link(s).  
 
-![*Figure caption: Select granules and click download*](../img/eds_ecov002_l2t_lste_multi_granule_selection.png)  
+![*Figure caption: Select granules and click download*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-granule-selection.jpg)  
 
-On the next page click the **Direct Download** option and click the green **Download Data** on the bottom left side of the page.  
+On the next page click the **Direct Download** option and click the green **Download Data** on the bottom left side of the page. In this page some datasets will provide a data customization service, this is really important if we don't want to download the full record but just the variables and region of interest.
 
-![*Figure caption: Direct download multiple granules*](../img/eds_ecov002_l2t_lste_multi_granule_download.png)  
+![*Figure caption: Direct download multiple granules*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-download-or-subset.jpg)  
 
-We're now taked to the final page for instructions to download and links for data access in the cloud. You should see three tabs: `Download Files`, `AWS S3 Access`, `Download Script`:  
+If we pick the direct download option, we'll be redirected to the final page for instructions to download and links for data access in the cloud. You should see three tabs: `Download Files`, `AWS S3 Access`, `Download Script`:  
 
-![*Figure caption: Download to local*](../img/eds_ecov002_l2t_lste_multi_granule_download_https_links_src.png)  
+![*Figure caption: Download to local*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-final-download.png)  
 
-![*Figure caption: Direct S3 access*](../img/eds_ecov002_l2t_lste_multi_granule_download_s3_links_src.png)  
+If we select the data customization service we'll be able to subset by region of interest, variables and temporal parameters.
+
+![*Figure caption: Harmony subsetter service*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-harmony.jpg)  
+
+Variables can be selected too.
+
+![*Figure caption: Harmony subsetter service*](https://raw.githubusercontent.com/NASA-Openscapes/media/main/images/scc/gedi-harmony-variables.jpg)  
 
 The *Download Files* tab provides the `https://` links for downloading the files locally  
 
