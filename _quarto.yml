@@ -46,6 +46,9 @@ website:
         - section: "GEDI / IS2 Science Tutorial"
           contents: 
             - tutorials/index.md
+            - href: tutorials/GEDI_data_SSC23.ipynb
+              text: "GEDI Level 2B V002 Data"
+            
           
 format:
   html:
